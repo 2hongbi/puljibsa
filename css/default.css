@@ -1,14 +1,41 @@
-@font-face {
-    font-family: 'IM_Hyemin-Bold';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2106@1.1/IM_Hyemin-Bold.woff2') format('woff');
-    font-weight: normal;
-    font-style: normal;
+/* @import url(//fonts.googleapis.com/earlyaccess/nanumgothic.css); */
+.nanumgothic * {
+  font-family: 'Nanum Gothic', sans-serif;
 }
 
-body{
-  background-color: lightgray; font-size:50px;
+body {
+  background-image: url('../img/backImg.png');
+  font-family: 'Nanum Gothic';
 }
 
-*{
-  font-family: 'IM_Hyemin-Bold';
+.img-small {
+  width: 150px;
+}
+
+.footer {
+  width: 112px;
+  height: 14px;
+  font-family: NanumGothic;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 14px;
+  /* identical to box height */
+  text-align: center;
+  letter-spacing: 0.05em;
+  color: #A7A7A7;
+}
+
+.header {
+  width: 200px;
+  height: 12px;
+  font-family: NanumGothic;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 12px;
+  /* identical to box height */
+  text-align: center;
+  letter-spacing: 0.05em;
+  color: #A7A7A7;
 }

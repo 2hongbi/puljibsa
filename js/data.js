@@ -3,9 +3,10 @@ const qnaList = [
     q: '풀집사님 반가워요! \n' +
       '저는 풀님의 진료를 볼 풀 전문가 입니다. \n' +
       '원하는 답변을 선택해주세요.',
+    qImg: './../img/expert.png',
     a: [
-      { answer: '상태 진단 해주세요.', type: ['cow', 'tiger', 'dragon', 'chick'] },
-      { answer: '풀집사 서비스가 궁금해요.', type: ['mouse', 'rabbit', 'horse', 'snake', 'dog', 'monkey'] }
+      { answer: '상태 진단 해주세요.', type: 'diagnosis' },
+      { answer: '풀집사 서비스가 궁금해요.', type: 'service' }
     ]
   },
   {

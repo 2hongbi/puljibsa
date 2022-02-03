@@ -1,3 +1,28 @@
-#qna{
-  display:none;
+.qna{
+  display: none;
+  margin-top: 50px;
+}
+
+#box1 {
+  text-align: center;
+}
+
+#p {
+  text-align: center;
+}
+
+.checkbox-with-image {
+  position: absolute;
+  width: 215px;
+  height: 76.74px;
+  left: 137.02px;
+  top: 453.49px;
+}
+
+.image-with-checkbox {
+  position: absolute;
+  width: 124px;
+  height: 145px;
+  left: 20px;
+  top: 406px;
 }
