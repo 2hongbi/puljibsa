@@ -1,9 +1,37 @@
-.qna{
-  margin-top: 50px;
+/* main */
+.img-small {
+  width: 150px;
 }
 
-#box1 {
-  text-align: center;
+.btn {
+  width: 129px;
+  height: 48px;
+  left: 123px;
+  top: 531px;
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+}
+
+#sns{
+  margin: 50px;
+}
+
+#facebook{
+  margin-right: 20px;
+}
+#kakaotalk{
+  margin-right: 20px;
+}
+#instagram{
+  margin-right: 20px;
+}
+
+/* qna section */
+.qna{
+  margin-top: 50px;
 }
 
 .content {
@@ -24,6 +52,13 @@
   margin-top: var(--bs-gutter-y);
 }
 
+#title{
+  margin-top: 80px;
+}
+
+#qna1 { display: none; }
+#qna2 { display: none; }
+
 .expert {
   text-align: center;
 }
@@ -37,39 +72,36 @@
   text-align: left;
 }
 
-.only-checkbox input{
-  margin-bottom: 20px;
+.checkbox-with-img input,.only-checkbox input{
+  margin-bottom: 15px;
 }
 
 /* insert-pic section */
 #insert-pic{
-  display:block;
+  display:none;
   margin-top: 150px;
 }
 
 #exampleIMG{
-  margin-top: 55px;
   margin-left: 20px;
   float:left;
   margin-right: 30px;
 }
 
 #example-guide{
-  margin-top: 55px;
   float:left;
   text-align: left;
 }
 
 #addIMG{
-  margin-top: 250px;
+  margin-top: 200px;
   text-align: center;
 }
 
 /* addition-qna section */
 #addition-qna{
-  display: block;
+  display: none;
 }
-
 
 #addition {
   font-size: 17px;
@@ -77,29 +109,32 @@
   text-align: center;
 }
 
-
+/* loading section */
+#loading {
+  display: none;
+}
 
 /* common */
 .prev-btn{
-  width: 86.66px;
+  width: 86px;
   height: 37px;
   left: 28px;
   top: 651px;
 
   background: rgba(255, 255, 255, 0.8);
-  border: 0.1px solid rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
   box-sizing: border-box;
   border-radius: 15px;
 }
 
 .next-btn{
-  width: 86.66px;
+  width: 86px;
   height: 37px;
   left: 260px;
   top: 651px;
 
   background: rgba(255, 255, 255, 0.8);
-  border: 0.1px solid rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
   box-sizing: border-box;
   border-radius: 15px;
 }

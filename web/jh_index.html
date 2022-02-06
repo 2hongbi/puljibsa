@@ -18,8 +18,7 @@
           integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
   <!-- Bootstrap -->
 
-  <link href="./../css/default.css" rel="stylesheet">
-  <link href="./../css/main.css" rel="stylesheet">
+  <link href="./../css/common.css" rel="stylesheet">
   <link href="./../css/qna.css" rel="stylesheet">
   <link href="./../css/animation.css" rel="stylesheet">
 </head>
@@ -72,7 +71,7 @@
     </div>
 
     <!-- ******qna2****** -->
-    <div id='qna2' class="mx-auto">
+    <div id='qna2' class="qna mx-auto">
       <div class="expert mt-10 mx-auto mb-5">
         <img src="./../img/expert.png" alt="expertImg" class="img-fluid">
         <p class="mb-5s">
@@ -99,12 +98,10 @@
         보다 정확한 진단을 위해<br>
         <b>아래의 사진과 요구 사항</b>을 참고해주세요.
       </p>
-
       <div id="example">
         <div id="exampleIMG">
           <img src="./../img/example.png" alt="exampleImg" class="img-fluid">
         </div>
-
         <div id="example-guide">
           ✔ 풀님의 단독 사진을 올려주세요.<br>
           ✔ 풀님의 잎사귀와 줄기 전체가<br>
@@ -112,8 +109,6 @@
           ✔ 흔들리지 않게 촬영해주세요.
         </div>
       </div>
-
-
       <div id="addIMG">
         <img src="./../img/addIMG.png" alt="exampleImg" class="img-fluid">
       </div>
@@ -144,8 +139,10 @@
     </section>
 
     <!-- ******loading****** -->
-    <section id='loading' class="mx-auto">
-
+    <section id='loading'>
+      <div style="display: grid; place-items: center; min-height: 100vh;">
+        <p>상태진단중...</p>
+      </div>
     </section>
 
     <!-- ******result****** -->
@@ -155,7 +152,7 @@
 
 
     <!-- Footer -->
-      <p class="fixed-bottom mx-auto footer fw-light">Copyrightⓒ플즈</p>
+    <p class="fixed-bottom mx-auto footer fw-light">Copyrightⓒ플즈</p>
     <!-- Footer -->
 </div>
 <script src="./../js/start.js" charset="utf-8"></script>

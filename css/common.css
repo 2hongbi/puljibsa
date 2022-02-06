@@ -1,0 +1,45 @@
+* {
+    max-width: 100%;
+    height: auto;
+}
+
+body {
+    background-image: url('./../img/backImg.png');
+}
+
+:root {
+    font-family: 'NanumGothic', serif;
+    font-style: normal;
+    font-size: 17px;
+    line-height: 15px;
+}
+
+/* header */
+.header {
+    width: 200px;
+    height: 12px;
+    font-family: 'NanumGothic', serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 12px;
+    /* identical to box height */
+    text-align: center;
+    letter-spacing: 0.05em;
+    color: #A7A7A7;
+}
+
+/* footer */
+.footer {
+    width: 112px;
+    height: 14px;
+    font-family: 'NanumGothic', serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 14px;
+    /* identical to box height */
+    text-align: center;
+    letter-spacing: 0.05em;
+    color: #A7A7A7;
+}
