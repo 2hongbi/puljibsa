@@ -1,5 +1,6 @@
 const main = document.querySelector("#main")
-const qna = document.querySelector("#qna")
+const qna = document.querySelector("#qna1")
+// const qna = document.querySelector("#qna")
 
 function convertStr(str){
   return str.replace(new RegExp("\\n", "g"), "<br />");
@@ -37,7 +38,7 @@ function begin() {
       main.style.display = "none";
       qna.style.display = "block";
     }, 450)
-    let qIdx = 0;
-    goNext(qIdx);
+    // let qIdx = 0;
+    // goNext(qIdx);
   }, 450);
 }

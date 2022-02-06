@@ -1,36 +1,40 @@
-.qna{
-  display: none;
-  margin-top: 50px;
+#qna2{
+    display:none;
 }
 
-#box1 {
-  text-align: center;
+#qna2-IMG{
+    margin-top: 100px;
+    text-align: center;
 }
 
-#expertIMG {
-  text-align: center;
+#qna2-guide{
+    margin-top: 50px;
+    text-align: center;
+    font-size: larger;
 }
 
-#p {
-  text-align: center;
+#state-checkbox{
+    margin-top: 50px;
+    margin-left: 17%;
+    font-size: larger;
 }
 
-.checkbox-with-image {
-  position: absolute;
-  width: 215px;
-  height: 76.74px;
-  left: 137.02px;
-  top: 453.49px;
+#state1{
+    margin-top: 50px;
+    margin-bottom: 20px;
 }
 
-.image-with-checkbox {
-  position: absolute;
-  width: 124px;
-  height: 145px;
-  left: 20px;
-  top: 406px;
+#state2{
+    margin-bottom: 20px;
 }
 
+#state3{
+    margin-bottom: 20px;
+}
+
+#state4{
+    margin-bottom: 20px;
+}
 
 #pre{
   position: absolute;

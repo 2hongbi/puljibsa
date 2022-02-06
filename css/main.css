@@ -7,7 +7,11 @@
 
 #main {
   text-align: center;
-  display:none;
+  /*display:none;*/
+}
+
+#title{
+  margin-top: 80px;
 }
 
 .btn {
@@ -21,4 +25,18 @@
   box-sizing: border-box;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
   border-radius: 15px;
+}
+
+#sns{
+  margin-top: 180px;
+}
+
+#fb{
+  margin-right: 20px;
+}
+#kt{
+  margin-right: 20px;
+}
+#isg{
+  margin-right: 20px;
 }

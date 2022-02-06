@@ -1,36 +1,28 @@
-.qna{
-  display: none;
-  margin-top: 50px;
+#insert-pic{
+    display:none;
 }
 
-#box1 {
-  text-align: center;
+#insert-pic-guide{
+    margin-top: 150px;
+    text-align: center;
 }
 
-#expertIMG {
-  text-align: center;
+#exampleIMG{
+    margin-top: 55px;
+    margin-left: 20px;
+    float:left;
+    margin-right: 30px;
 }
 
-#p {
-  text-align: center;
+#example-guide{
+    margin-top: 55px;
+    float:left;
 }
 
-.checkbox-with-image {
-  position: absolute;
-  width: 215px;
-  height: 76.74px;
-  left: 137.02px;
-  top: 453.49px;
+#addIMG{
+    margin-top: 200px;
+    text-align: center;
 }
-
-.image-with-checkbox {
-  position: absolute;
-  width: 124px;
-  height: 145px;
-  left: 20px;
-  top: 406px;
-}
-
 
 #pre{
   position: absolute;
