@@ -27,7 +27,6 @@ function goNext(qIdx) {
   }
 }
 
-
 function begin() {
   main.style.WebkitAnimation = "fadeOut 1s";
   main.style.animation = "fadeOut 1s";

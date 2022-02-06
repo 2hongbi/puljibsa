@@ -1,5 +1,5 @@
 .qna{
-  display: none;
+  display: block; /* none */
   margin-top: 50px;
 }
 
@@ -7,33 +7,24 @@
   text-align: center;
 }
 
-#expertIMG {
+.expert {
   text-align: center;
 }
 
-#p {
-  text-align: center;
+.checkbox-with-img {
+  margin: auto;
+  text-align: left;
 }
 
-.checkbox-with-image {
-  position: absolute;
-  width: 215px;
-  height: 76.74px;
-  left: 137.02px;
-  top: 453.49px;
+.only-checkbox {
+  text-align: left;
 }
 
-.image-with-checkbox {
-  position: absolute;
-  width: 124px;
-  height: 145px;
-  left: 20px;
-  top: 406px;
+.only-checkbox input{
+  margin-bottom: 20px;
 }
 
-
-#pre{
-  position: absolute;
+.prev-btn{
   width: 86.66px;
   height: 37px;
   left: 28px;
@@ -45,8 +36,7 @@
   border-radius: 15px;
 }
 
-#next{
-  position: absolute;
+.next-btn{
   width: 86.66px;
   height: 37px;
   left: 260px;
@@ -56,4 +46,33 @@
   border: 0.1px solid rgba(0, 0, 0, 0.1);
   box-sizing: border-box;
   border-radius: 15px;
+}
+
+
+/* mobile (max-width: 450px) */
+@media screen and (max-width:450px) {
+  .character-img {
+    position: absolute;
+    width: 124px;
+    height: 145px;
+    left: 20px;
+    top: 406px;
+  }
+
+  .checkbox-with-img {
+    position: absolute;
+    width: auto;
+    height: 76px;
+    left: 137px;
+    top: 440px;
+  }
+
+  .prev-btn {
+    position: absolute;
+    left: 40px;
+  }
+
+  .next-btn {
+    position: absolute;
+  }
 }

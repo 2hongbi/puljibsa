@@ -1,21 +1,8 @@
-/* *{
-  margin: 0 auto;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-} */
-
-#main {
-  text-align: center;
-  /*display:none;*/
-}
-
 #title{
   margin-top: 80px;
 }
 
 .btn {
-  position: absolute;
   width: 129px;
   height: 48px;
   left: 123px;
@@ -28,15 +15,15 @@
 }
 
 #sns{
-  margin-top: 180px;
+  margin: 50px;
 }
 
-#fb{
+#facebook{
   margin-right: 20px;
 }
-#kt{
+#kakaotalk{
   margin-right: 20px;
 }
-#isg{
+#instagram{
   margin-right: 20px;
 }
