@@ -21,7 +21,6 @@
   <link href="./../css/default.css" rel="stylesheet">
   <link href="./../css/main.css" rel="stylesheet">
   <link href="./../css/qna.css" rel="stylesheet">
-  <link href="./../css/addition-qna.css" rel="stylesheet">
   <link href="./../css/animation.css" rel="stylesheet">
 </head>
 
@@ -126,26 +125,22 @@
 
     <!-- ******addition-qna****** -->
     <section id='addition-qna' class="mx-auto">
-      <div id="addition-guide">
-        <p>
-          첫번째 <b>추가 질문</b> 입니다.
-        </p>
-      </div>
       <div id="addition">
-        <p>
-          풀님에게 어느 정도의 주기로 물을 주나요?
-        </p>
+        <p>첫번째 <b>추가 질문</b> 입니다.</p>
+        <p>풀님에게 어느 정도의 주기로 물을 주나요?</p>
       </div>
-      <div class="abcde">
-        <span class="image-with-checkbox">
-          <img src="./../img/character.png" alt="charImg" class="img-fluid img-small">
-        </span>
-        <span class="checkbox-with-image">
+      <div class="content">
+        <div class="col-md-auto character-img">
+          <img src="./../img/character.png" alt="풀집사캐릭터" class="img-fluid img-small">
+        </div>
+        <div class="col-md-auto checkbox-with-img">
           <input type="checkbox" name="check" value="diagnosis"> 한 달에 한 번이요.<br>
           <input type="checkbox" name="check" value="service"> 두 주에 한 번보다 자주요.<br>
           <input type="checkbox" name="check" value="service"> 잘 모르겠어요.
-        </span>
+        </div>
       </div>
+      <button type="button" class="prev-btn btn btn-light mt-5" onclick="begin()">&larr; 이전</button>
+      <button type="button" class="next-btn btn btn-light mt-5" onclick="begin()">다음 &rarr;</button>
     </section>
 
     <!-- ******loading****** -->
