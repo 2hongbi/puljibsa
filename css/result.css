@@ -1,0 +1,97 @@
+#hashtags {
+    font-weight: bold;
+    text-align: center;
+}
+
+#downShare {
+    align-items: center;
+    text-align: center;
+    margin: 10px;
+}
+
+#plantResult {
+    display: inline-block;
+    margin: 25px;
+    width: 100%;
+    max-width: 500px;
+}
+
+
+.result {
+    display: block;
+    color: #000000;
+    font-weight: bold;
+}
+
+.explanation {
+    display: block;
+    margin-bottom: 45px;
+}
+
+.pageBtn {
+    margin: 100px;
+    box-shadow: 1px 5px 3px 1px #899599;
+    background-color: #fff;
+    border-radius:15px;
+    border:1px solid #e4e4e4;
+    display:inline-block;
+    cursor:pointer;
+    color:#000000;
+    font-family: 'Nanum Gothic', serif;
+    font-size:15px;
+    font-weight:bold;
+    padding:10px 18px;
+    text-decoration:none;
+}
+.pageBtn:hover {
+    background-color:transparent;
+}
+.pageBtn:active {
+    position:relative;
+    top:1px;
+}
+
+/* web (min-width: 400px) */
+@media screen and (min-width:400px) {
+
+
+}
+
+/* mobile (max-width: 400px) */
+@media screen and (max-width:400px) {
+
+    #hashtags {
+        font-size: 14px;
+    }
+
+    #plantImg {
+        width: 350px;
+        height: 350px;
+    }
+
+    #download, #share {
+        width: 15px;
+        height: 15px;
+    }
+
+    #plantResult {
+        width: 100%;
+    }
+
+    #plantResult .result {
+        font-size: 14px;
+        font-weight: bold;
+        text-align: left;
+    }
+
+    #plantResult .explanation {
+        font-size: 14px;
+        text-align: left;
+    }
+
+    .pageBtn {
+        margin: 10px;
+        font-size:13px;
+        padding:10px 18px;
+    }
+}

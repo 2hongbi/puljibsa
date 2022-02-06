@@ -1,61 +1,32 @@
-@media screen and (max-width : 400px) {
-    #hashtags {
-        font-size: 14px;
-        font-weight: bold;
-        text-align: center;
-    }
-
-    #plantImg {
-        width: 350px;
-        height: 350px;
-    }
-
-    #download, #share {
-        width: 100px;
-        height: 100px;
-    }
-
-    .result {
-        font-size: 14px;
-        font-weight: bold;
-        text-align: left;
-    }
-
-    .explanation {
-        font-size: 14px;
-        text-align: left;
-    }
-
+* {
+    max-width: 100%;
+    height: auto;
 }
 
-
 body {
-    background-image: url(file:///C:/Users/lim/Desktop/%ED%94%84%EB%A1%A0%ED%8A%B8%EC%97%94%EB%93%9C_%ED%92%80%EC%A7%91%EC%82%AC/mypart_plant/img/unsplash_zGZYQQVmXw0.png);
+    background-image: url('./../img/backImg.png');
 }
 
 :root {
-    font-family: NanumGothic;
+    font-family: 'NanumGothic', serif;
     font-style: normal;
     font-size: 17px;
     line-height: 15px;
 }
 
-#hashtags {
+
+h5 {
+    margin-top: 0;
+}
+
+table {
+    border-spacing: 10px;
+}
+
+img {
+    display: block;
     margin-right: auto;
     margin-left: auto;
-
-    font-weight: bold;
-    position: absolute;
-    top: 12%;
-    left: 45%;
-
-    display: flex;
-    align-items: center;
-    text-align: center;
-    letter-spacing: 0.05em;
-
-    color: #000000;
-    list-style: none;
 }
 
 ul {
@@ -65,103 +36,7 @@ ul {
     margin-right: auto;
 }
 
-#icon {
-    position: absolute;
-    left: 65%;
-    right: 5%;
-    top: 55%;
-
-/*   
-   margin-left: auto;
-   margin-right: auto;
-*/
-}
-
-#download {
-    
-}
-
-
-/* 카카오톡 공유, 공유 링크 만들기
-#share {
-  meta property="og:url" content="공유시 이동 url";
-  meta property="og:title" content="AI 풀집사🌱";
-  meta property="og:type" content="website";
-  meta property="og:image" content="풀집사 이미지, 아이콘 넣기";
-  meta property="og:description" content="AI 풀집사(플즈) 식물 진단 결과";
-} 
-*/
-
-
-table {
-    border-spacing: 10px;
-}
-
-img {
-    padding-top: 150px;
-    display: block; 
-    margin-right: auto;
-    margin-left: auto;
-}
-
-.result {
-    color: #000000;
-    list-style: none;
-    font-weight: bold;
-}
-
-p  { 
+p {
     line-height: 140%;
     font-size: 15px;
-}
-
-.myButton1 {
-    margin-top: 5%;
-    margin-left: 30%;
-
-	box-shadow: 1px 5px 3px 1px #899599;
-	background-color: #fff;
-	border-radius:15px;
-	border:1px solid #e4e4e4;
-	display:inline-block;
-	cursor:pointer;
-	color:#000000;
-	font-family:Arial;
-	font-size:15px;
-	font-weight:bold;
-	padding:10px 18px;
-	text-decoration:none;
-}
-.myButton1:hover {
-	background-color:transparent;
-}
-.myButton1:active {
-	position:relative;
-	top:1px;
-}
-
-.myButton2 {
-    float: right;
-    margin-top: 5%;
-    margin-right: 30%;
-
-	box-shadow: 1px 5px 3px 1px #899599;
-	background-color: #fff;
-	border-radius:15px;
-	border:1px solid #e4e4e4;
-	display:inline-block;
-	cursor:pointer;
-	color:#000000;
-	font-family:Arial;
-	font-size:15px;
-	font-weight:bold;
-	padding:10px 18px;
-	text-decoration:none;
-}
-.myButton2:hover {
-	background-color:transparent;
-}
-.myButton2:active {
-	position:relative;
-	top:1px;
 }
