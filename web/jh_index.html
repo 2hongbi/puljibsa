@@ -21,7 +21,6 @@
   <link href="./../css/default.css" rel="stylesheet">
   <link href="./../css/main.css" rel="stylesheet">
   <link href="./../css/qna.css" rel="stylesheet">
-  <link href="./../css/insert-pic.css" rel="stylesheet">
   <link href="./../css/addition-qna.css" rel="stylesheet">
   <link href="./../css/animation.css" rel="stylesheet">
 </head>
@@ -60,7 +59,7 @@
         </p>
       </div>
 
-      <div class="row">
+      <div class="content">
         <div class="col-md-auto character-img">
           <img src="./../img/character.png" alt="풀집사캐릭터" class="img-fluid img-small">
         </div>
@@ -97,10 +96,10 @@
 
     <!-- ******insert-pic****** -->
     <section id='insert-pic' class="mx-auto">
-      <div id="insert-pic-guide">
+      <p class="mb-5">
         보다 정확한 진단을 위해<br>
-        아래의 사진과 요구 사항을 참고해주세요.
-      </div>
+        <b>아래의 사진과 요구 사항</b>을 참고해주세요.
+      </p>
 
       <div id="example">
         <div id="exampleIMG">
@@ -110,7 +109,7 @@
         <div id="example-guide">
           ✔ 풀님의 단독 사진을 올려주세요.<br>
           ✔ 풀님의 잎사귀와 줄기 전체가<br>
-            나오게 올려주세요.<br>
+            &emsp;&nbsp;나오게 올려주세요.<br>
           ✔ 흔들리지 않게 촬영해주세요.
         </div>
       </div>
@@ -120,8 +119,8 @@
         <img src="./../img/addIMG.png" alt="exampleImg" class="img-fluid">
       </div>
 
-      <button id="pre" type="button" class="btn btn-light mt-5" onclick="js:begin()">&larr; 이전</button>
-      <button id="next" type="button" class="btn btn-light mt-5" onclick="js:begin()">다음 &rarr;</button>
+      <button type="button" class="prev-btn btn btn-light mt-5" onclick="begin()">&larr; 이전</button>
+      <button type="button" class="next-btn btn btn-light mt-5" onclick="begin()">다음 &rarr;</button>
 
     </section>
 
