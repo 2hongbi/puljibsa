@@ -1,4 +1,7 @@
 /* main */
+#main{
+  display: none;
+}
 .img-small {
   width: 150px;
 }
@@ -92,7 +95,7 @@
 
 /* addition-qna section */
 #addition-qna{
-  display: none;
+  /*display: none;*/
 }
 
 #addition {
