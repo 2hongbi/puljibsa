@@ -1,7 +1,8 @@
 /* main */
 #main{
-  display: none;
+  /*display: none;*/
 }
+
 .img-small {
   width: 150px;
 }
@@ -106,7 +107,7 @@
 
 /* loading section */
 #loading {
-  display: none;
+  /*display: none;*/
 }
 
 /* common */
