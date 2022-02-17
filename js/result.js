@@ -22,7 +22,7 @@ const result = [
 ];
 
 document.addEventListener('DOMContentLoaded', function() {
-    printResult('고무나무', '과습', 1);
+    printResult('고무나무', '과습', 0);
 }, false);
 
 function printResult(plantType, plantSym,resultNum){
