@@ -62,8 +62,8 @@
         <img src="./../img/character.png" alt="풀집사캐릭터" class="img-fluid img-small">
       </div>
       <div class="col-md-auto checkbox-with-img">
-        <input type="checkbox" name="check" id="diagnosis"> 상태진단 해주세요. <br>
-        <input type="checkbox" name="check" id="service" onclick="qna1Servicebox('./../web/introduction.html');"> 풀집사 서비스가 궁금해요.
+        <input type="checkbox" name="qna1_check" value="a" onclick="checkOnlyOne(this)"> 상태진단 해주세요. <br>
+        <input type="checkbox" name="qna1_check" value="b" onclick="checkOnlyOne(this); qna1Servicebox('./../web/introduction.html');"> 풀집사 서비스가 궁금해요.
       </div>
     </div>
     <button type="button" class="prev-btn btn btn-light mt-5" onclick="qna1Main_pre();">이전</button>
@@ -89,7 +89,7 @@
     </div>
 
     <button type="button" class="prev-btn btn btn-light mt-5" onclick="qna2Qna1_pre();">이전</button>
-    <button type="button" class="next-btn btn btn-light mt-5" onclick="qna2Insert_next();">다음</button>
+    <button type="button" class="next-btn btn btn-light mt-5" onclick="each_check(); qna2Insert_next();">다음</button>
   </div>
 
   <!-- ******insert-pic****** -->
@@ -135,7 +135,7 @@
       </div>
     </div>
     <button type="button" class="prev-btn btn btn-light mt-5" onclick="addqnaInsert_pre();">이전</button>
-    <button type="button" class="next-btn btn btn-light mt-5" onclick="addqnaResult_next(); addqnaResult_Page();">다음</button>
+    <button type="button" class="next-btn btn btn-light mt-5" onclick="each_check(); addqnaResult_next(); addqnaResult_Page();">다음</button>
   </section>
 
   <!-- ******loading****** -->
