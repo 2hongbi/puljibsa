@@ -3,7 +3,7 @@ const qna1 = document.querySelector("#qna1")
 const qna2 = document.querySelector("#qna2")
 const insert_pic = document.querySelector("#insert-pic")
 const addition_qna = document.querySelector("#addition-qna")
-const result = document.querySelector("#result")
+const result = document.querySelector("#plantResult")
 const introduction = document.querySelector("#introduction")
 
 //main & qna1
@@ -33,9 +33,7 @@ function qna1Main_pre() {
   }, 450);
 }
 
-//1. 풀집사 서비스 소개를 선택했을 때, qna1 & checkbox_service에 연결
-
-/* if문으로 체크박스 -> 다음 버튼 후 결과 나오기
+/* 원하는 체크박스 선택 후 -> 다음 버튼 누르면 결과 나오게 if문 걸기
 function checkBox(){
   $("#ckbNextBtn").click(function(){
       if($("#diagnosis").is(":checked") == true){
@@ -46,8 +44,9 @@ function checkBox(){
   });
 } */
 
+//1. 풀집사 서비스 소개를 선택했을 때(첫번째 체크박스 결과)
 //체크박스 자체에 url 연결
-function qna1Servicebox_movepage(page) {
+function qna1Servicebox(page) {
   window.document.location.href=page;
   return;
 }
@@ -141,26 +140,7 @@ function addqnaInsert_pre() {
 }
 
 
-//추가 질문 후 로딩화면 연결
-function addqnaLoading_next() {
-  addition_qna.style.WebkitAnimation = "fadeOut 1s";
-  addition_qna.style.animation = "fadeOut 1s";
-  setTimeout(() => {
-    loading.style.WebkitAnimation = "fadeIn 1s";
-    loading.style.animation = "fadeIn 1s";
-    setTimeout(() => {
-      addition_qna.style.display = "none";
-      loading.style.display = "block";
-    }, 450)
-  }, 450);
-}
-
-function addqnaLoading_Page() {
-  window.location.href = './../web/loading.html'
-}
-
-
-// 로딩화면 & result --하이퍼링크 연결
+//addition_qna & result
 function addqnaResult_next() {
   addition_qna.style.WebkitAnimation = "fadeOut 1s";
   addition_qna.style.animation = "fadeOut 1s";
@@ -174,14 +154,26 @@ function addqnaResult_next() {
   }, 450);
 }
 
+function resultAddqna_pre() {
+  result.style.WebkitAnimation = "fadeOut 1s";
+  result.style.animation = "fadeOut 1s";
+  setTimeout(() => {
+    addition_qna.style.WebkitAnimation = "fadeIn 1s";
+    addition_qna.style.animation = "fadeIn 1s";
+    setTimeout(() => {
+      result.style.display = "none";
+      addition_qna.style.display = "block";
+    }, 450)
+  }, 450);
+}
+
 function addqnaResult_Page() {
   window.location.href = './../web/result.html'
 }
 
-// result & introduction  --하이퍼링크 연결
+
+// result & introduction
 function resultIntro_next() {
-  /*window.history.back(-1);
-  window.location.href = './../web/index.html/#addition_qna' */
   result.style.WebkitAnimation = "fadeOut 1s";
   result.style.animation = "fadeOut 1s";
   setTimeout(() => {
@@ -197,5 +189,3 @@ function resultIntro_next() {
 function resultIntro_Page() {
   window.location.href = './../web/introduction.html'
 }
-
-//pre는 동일한 반응을 하는 다른 함수 적용
