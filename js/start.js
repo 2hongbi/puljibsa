@@ -46,11 +46,6 @@ function checkBox(){
 
 //1. 풀집사 서비스 소개를 선택했을 때(첫번째 체크박스 결과)
 //체크박스 자체에 url 연결
-function qna1Servicebox(page) {
-  window.document.location.href=page;
-  return;
-}
-
 function MainPage_return() {
   window.location.href = './../web/index.html'
 }
@@ -58,16 +53,21 @@ function MainPage_return() {
 
 // 2. 풀집사 서비스 이용을 선택했을 때, qna1 & qna2
 function qna1Qna2_next() {
-  qna1.style.WebkitAnimation = "fadeOut 1s";
-  qna1.style.animation = "fadeOut 1s";
-  setTimeout(() => {
-    qna2.style.WebkitAnimation = "fadeIn 1s";
-    qna2.style.animation = "fadeIn 1s";
+  const introCheck = document.getElementsByName("qna1_check")[1];
+  if(introCheck.checked === true) {
+    window.location.href = './../web/introduction.html'
+  }else{
+    qna1.style.WebkitAnimation = "fadeOut 1s";
+    qna1.style.animation = "fadeOut 1s";
     setTimeout(() => {
-      qna1.style.display = "none";
-      qna2.style.display = "block";
-    }, 450)
-  }, 450);
+      qna2.style.WebkitAnimation = "fadeIn 1s";
+      qna2.style.animation = "fadeIn 1s";
+      setTimeout(() => {
+        qna1.style.display = "none";
+        qna2.style.display = "block";
+      }, 450)
+    }, 450);
+  }
 }
 
 function qna2Qna1_pre() {
