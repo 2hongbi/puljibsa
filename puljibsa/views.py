@@ -5,3 +5,7 @@ from .models import Question, Answer
 
 def index(request):
     return render(request, 'puljibsa/index.html')
+
+
+def qna(request):
+    return render(request, 'puljibsa/qna.html')
