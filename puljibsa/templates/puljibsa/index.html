@@ -4,15 +4,14 @@
 {% block title %}풀집사🌱{% endblock %}
 
 {% block content %}
-<!-- ******main****** -->
+<!-- Main -->
 <div id='main' class="mx-auto mt-10 py-5 px-3">
   <div id="title" class="mx-auto">
     <img src="{% static 'img/title.png' %}" alt="titleImg" class="img-fluid"><br>
     <img src="{% static 'img/character.png' %}" alt="chaImg" class="img-fluid"><br>
   </div>
 
-  <button type="button" class="btn btn-light mt-5">시작하기</button>
-  <!-- <button type="button" class="btn btn-light mt-5" onclick="begin()">시작하기</button> -->
+  <button type="button" class="btn btn-light mt-5" onclick="begin();">시작하기</button>
 
   <div id="sns">
     <img id="facebook" src="{% static '/img/SNS/facebook.png' %}" alt="titleImg" class="img-fluid">
@@ -21,4 +20,104 @@
     <img id="link" src="{% static '/img/SNS/link.png' %}" alt="titleImg" class="img-fluid">
   </div>
 </div>
+
+<!-- QnA 1 -->
+<div id='qna1' class="qna mx-auto">
+<div class="expert mt-10 mx-auto mb-5">
+  <img src="{% static 'img/expert.png' %}" alt="expertImg" class="img-fluid">
+
+  <p class="mb-5">
+    풀집사님 반가워요!<br>
+    저는 풀님의 진료를 볼 풀 전문가 입니다.<br>
+    원하는 답변을 선택해주세요.
+  </p>
+</div>
+
+<div class="content">
+  <div class="col-md-auto character-img">
+    <img src="{% static 'img/character.png' %}" alt="풀집사캐릭터" class="img-fluid img-small">
+  </div>
+  <div class="col-md-auto checkbox-with-img">
+    <input type="checkbox" name="qna1_check" value="a" onclick="checkOnlyOne(this);"> 상태진단 해주세요. <br>
+    <input type="checkbox" name="qna1_check" value="b" onclick="checkOnlyOne(this);"> 풀집사 서비스가 궁금해요.
+  </div>
+</div>
+<button type="button" class="prev-btn btn btn-light mt-5" onclick="qna1Main_pre();">이전</button>
+<button type="button" class="next-btn btn btn-light mt-5" onclick="qna1Qna2_next();">다음</button>
+</div>
+
+<!-- QnA 2 -->
+<div id='qna2' class="qna mx-auto">
+<div class="expert mt-10 mx-auto mb-5">
+  <img src="{% static 'img/expert.png' %}" alt="expertImg" class="img-fluid">
+  <p class="mb-5s">
+    풀님에게 해당되는 증상에<br>
+    <b>모두</b> 체크해주세요.
+  </p>
+</div>
+
+<div class="only-checkbox">
+  <input type="checkbox" name="state" value="a" onclick="checkOnlyOne(this)"> 잎이 노랗게 변했어요. <br>
+  <input type="checkbox" name="state" value="b" onclick="checkOnlyOne(this)"> 잎이 힘없이 축 늘어졌어요. <br>
+  <input type="checkbox" name="state" value="c" onclick="checkOnlyOne(this)"> 줄기에 하얀 벌레가 생겼어요. <br>
+  <input type="checkbox" name="state" value="d" onclick="checkOnlyOne(this)"> 화분 속 흙이 하얗게 변했어요. <br>
+  <input type="checkbox" name="state" value="e" onclick="checkOnlyOne(this)"> 증상이 없어요.
+</div>
+
+<button type="button" class="prev-btn btn btn-light mt-5" onclick="qna2Qna1_pre();">이전</button>
+<button type="button" class="next-btn btn btn-light mt-5" onclick="each_check(); qna2Insert_next();">다음</button>
+</div>
+
+<!-- Insert Picture -->
+<section id='insert-pic' class="mx-auto">
+<p class="mb-5">
+  보다 정확한 진단을 위해<br>
+  <b>아래의 사진과 요구 사항</b>을 참고해주세요.
+</p>
+<div id="example">
+  <div id="exampleIMG">
+    <img src="{% static 'img/example.png' %}" alt="exampleImg" class="img-fluid">
+  </div>
+  <div id="example-guide">
+    ✔ 풀님의 단독 사진을 올려주세요.<br>
+    ✔ 풀님의 잎사귀와 줄기 전체가<br>
+    &emsp;&nbsp;나오게 올려주세요.<br>
+    ✔ 흔들리지 않게 촬영해주세요.
+  </div>
+</div>
+<div id="addIMG">
+  <img src="{% static 'img/addIMG.png' %}" alt="exampleImg" class="img-fluid">
+</div>
+
+<button type="button" class="prev-btn btn btn-light mt-5" onclick="insertQna2_pre();">이전</button>
+<button type="button" class="next-btn btn btn-light mt-5" onclick="insertAddqna_next();">다음</button>
+
+</section>
+
+<!-- Additional question -->
+<section id='addition-qna' class="mx-auto">
+<div id="addition">
+  <p>첫번째 <b>추가 질문</b> 입니다.</p>
+  <p>풀님에게 어느 정도의 주기로 물을 주나요?</p>
+</div>
+<div class="content">
+  <div class="col-md-auto character-img">
+    <img src="{% static 'img/character.png' %}" alt="풀집사캐릭터" class="img-fluid img-small">
+  </div>
+  <div class="col-md-auto checkbox-with-img">
+    <input type="checkbox" name="addition_qna1" value="a" onclick="checkOnlyOne(this)"> 한 달에 한 번이요.<br>
+    <input type="checkbox" name="addition_qna1" value="b" onclick="checkOnlyOne(this)"> 두 주에 한 번보다 자주요.<br>
+    <input type="checkbox" name="addition_qna1" value="c" onclick="checkOnlyOne(this)"> 잘 모르겠어요.
+  </div>
+</div>
+<button type="button" class="prev-btn btn btn-light mt-5" onclick="addqnaInsert_pre();">이전</button>
+<button type="button" class="next-btn btn btn-light mt-5" onclick="each_check(); addqnaResult_next(); addqnaResult_Page();">다음</button>
+</section>
+
+<!-- Loading page -->
+<section id='loading'>
+<div style="display: grid; place-items: center; min-height: 100vh;">
+  <p>상태진단중...</p>
+</div>
+</section>
 {% endblock %}
