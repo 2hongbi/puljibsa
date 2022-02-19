@@ -105,6 +105,28 @@
   text-align: center;
 }
 
+/* addition-qna2 section */
+#addition-qna2{
+  display: none;
+}
+
+#addition2 {
+  font-size: 17px;
+  margin-top: 100px;
+  text-align: center;
+}
+
+/* addition-qna3 section */
+#addition-qna3{
+  display: none;
+}
+
+#addition3 {
+  font-size: 17px;
+  margin-top: 100px;
+  text-align: center;
+}
+
 /* loading section */
 #loading {
   display: none;

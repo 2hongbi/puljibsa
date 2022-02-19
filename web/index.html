@@ -129,9 +129,50 @@
         <img src="./../img/character.png" alt="풀집사캐릭터" class="img-fluid img-small">
       </div>
       <div class="col-md-auto checkbox-with-img">
-        <input type="checkbox" name="addition_qna1" value="a" onclick="checkOnlyOne(this)"> 한 달에 한 번이요.<br>
-        <input type="checkbox" name="addition_qna1" value="b" onclick="checkOnlyOne(this)"> 두 주에 한 번보다 자주요.<br>
-        <input type="checkbox" name="addition_qna1" value="c" onclick="checkOnlyOne(this)"> 잘 모르겠어요.
+        <input type="checkbox" name="addition_qna" value="a" onclick="checkOnlyOne(this)"> 흙 상태를 보고 매번 달라요.<br>
+        <input type="checkbox" name="addition_qna" value="b" onclick="checkOnlyOne(this)"> 일주일에 한 번이요.<br>
+        <input type="checkbox" name="addition_qna" value="c" onclick="checkOnlyOne(this)"> 두 주에 한 번이요.<br>
+        <input type="checkbox" name="addition_qna" value="d" onclick="checkOnlyOne(this)"> 한달에 한 번이요.
+      </div>
+    </div>
+    <button type="button" class="prev-btn btn btn-light mt-5" onclick="addqnaInsert_pre();">이전</button>
+    <button type="button" class="next-btn btn btn-light mt-5" onclick="each_check(); addqnaResult_next(); addqnaResult_Page();">다음</button>
+  </section>
+
+    <!-- ******addition-qna2****** -->
+  <section id='addition-qna2' class="mx-auto">
+    <div id="addition2">
+      <p>두번째 <b>추가 질문</b> 입니다.</p>
+      <p>풀님에게 한번에 얼마만큼의 물을 주나요?</p>
+    </div>
+    <div class="content">
+      <div class="col-md-auto character-img">
+        <img src="./../img/character.png" alt="풀집사캐릭터" class="img-fluid img-small">
+      </div>
+      <div class="col-md-auto checkbox-with-img">
+        <input type="checkbox" name="addition_qna" value="a" onclick="checkOnlyOne(this)"> 화분 안의 흙이 다 젖을 정도로 줘요.<br>
+        <input type="checkbox" name="addition_qna" value="b" onclick="checkOnlyOne(this)"> 겉 흙만 젖을 정도로 줘요.<br>
+        <input type="checkbox" name="addition_qna" value="c" onclick="checkOnlyOne(this)"> 잘 모르겠어요.
+      </div>
+    </div>
+    <button type="button" class="prev-btn btn btn-light mt-5" onclick="addqnaInsert_pre();">이전</button>
+    <button type="button" class="next-btn btn btn-light mt-5" onclick="each_check(); addqnaResult_next(); addqnaResult_Page();">다음</button>
+  </section>
+
+    <!-- ******addition-qna3****** -->
+  <section id='addition-qna3' class="mx-auto">
+    <div id="addition3">
+      <p>마지막 <b>추가 질문</b> 입니다.</p>
+      <p>풀님은 어떤 환경에서 자라고 있나요?</p>
+    </div>
+    <div class="content">
+      <div class="col-md-auto character-img">
+        <img src="./../img/character.png" alt="풀집사캐릭터" class="img-fluid img-small">
+      </div>
+      <div class="col-md-auto checkbox-with-img">
+        <input type="checkbox" name="addition_qna" value="a" onclick="checkOnlyOne(this)"> 햇빛을 직접적으로 받는 곳이요.<br>
+        <input type="checkbox" name="addition_qna" value="b" onclick="checkOnlyOne(this)"> 유리창, 얇은 커튼 등을 통해 햇빛을 간접적으로 받는 곳이요.<br>
+        <input type="checkbox" name="addition_qna" value="c" onclick="checkOnlyOne(this)"> 그늘진 곳이요.
       </div>
     </div>
     <button type="button" class="prev-btn btn btn-light mt-5" onclick="addqnaInsert_pre();">이전</button>

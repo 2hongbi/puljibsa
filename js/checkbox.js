@@ -35,10 +35,10 @@ function checkOnlyOne(element) {
     element.checked = true;
 
 
-    const addition_qna1_checkboxes
-        = document.getElementsByName("addition_qna1");
+    const addition_qna_checkboxes
+        = document.getElementsByName("addition_qna");
 
-    addition_qna1_checkboxes.forEach((cb) => {
+    addition_qna_checkboxes.forEach((cb) => {
         cb.checked = false;
     })
 
@@ -57,7 +57,17 @@ function each_check() {
         console.log("체크된 값 : " + test);
     });
 
-    $("input[name=addition_qna1]:checked").each(function () {
+    $("input[name=addition_qna]:checked").each(function () {
+        var test = $(this).val();
+        console.log("체크된 값 : " + test);
+    });
+
+    $("input[name=addition_qna2]:checked").each(function () {
+        var test = $(this).val();
+        console.log("체크된 값 : " + test);
+    });
+
+    $("input[name=addition_qna3]:checked").each(function () {
         var test = $(this).val();
         console.log("체크된 값 : " + test);
     });
