@@ -5,12 +5,12 @@
 <section class="mx-auto mt-5 py-5 px-3">
     <div>
         <h6 id="hashtags">#식물종류  #증상이름</h6>
-        <img id="plantImg" src="./../img/plant.jpg" width="400" height="400" alt="이용자가 촬영한 식물사진">
+        <img id="plantImg" src="{% static 'img/plant.jpg' %}" width="400" height="400" alt="이용자가 촬영한 식물사진">
     </div>
 
     <div id="downShare">
-        <input id="download" type="image" src="./../img/button/download.png" alt="다운받기" width="20" height="20">
-        <input id="share" type="image" src="./../img/button/share.png" alt="공유하기" width="20" height="20">
+        <input id="download" type="image" src="{% static 'img/button/download.png' %}" alt="다운받기" width="20" height="20">
+        <input id="share" type="image" src="{% static 'img/button/share.png' %}" alt="공유하기" width="20" height="20">
     </div>
 
     <div id="plantResult">
@@ -37,7 +37,7 @@
     <br>
     <div class="text-center">
         <button type="button" class="pageBtn" onclick="MainPage_return();">처음으로</button>
-        <button type="button" class="pageBtn" onclick="resultIntro_next(); resultIntro_Page();">다음</button>
+        <button type="button" class="pageBtn" onclick="resultIntro_next(); location.href='introduction/';">다음</button>
     </div>
 </section>
 {% endblock %}

@@ -47,7 +47,7 @@ function checkBox(){
 //1. 풀집사 서비스 소개를 선택했을 때(첫번째 체크박스 결과)
 //체크박스 자체에 url 연결
 function MainPage_return() {
-  window.location.href = './../web/index.html'
+  window.location.href = '/'
 }
 
 
@@ -55,7 +55,7 @@ function MainPage_return() {
 function qna1Qna2_next() {
   const introCheck = document.getElementsByName("qna1_check")[1];
   if(introCheck.checked === true) {
-    window.location.href = './../web/introduction.html'
+    window.location.href = 'introduction/'
   }else{
     qna1.style.WebkitAnimation = "fadeOut 1s";
     qna1.style.animation = "fadeOut 1s";
@@ -168,7 +168,7 @@ function resultAddqna_pre() {
 }
 
 function addqnaResult_Page() {
-  window.location.href = './../web/result.html'
+  window.location.href = 'result/'
 }
 
 
@@ -187,5 +187,5 @@ function resultIntro_next() {
 }
 
 function resultIntro_Page() {
-  window.location.href = './../web/introduction.html'
+  window.location.href = 'introduction/'
 }
