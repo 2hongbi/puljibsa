@@ -10,7 +10,7 @@ const insert_pic = document.querySelector("#insert-pic")
 const addition_qna1 = document.querySelector("#addition-qna")
 const addition_qna2 = document.querySelector("#addition-qna2")
 const addition_qna3 = document.querySelector("#addition-qna3")
-const result = document.querySelector("#plantResult")
+const plantResult = document.querySelector("#plantResult")
 const introduction = document.querySelector("#introduction")
 
 //main & qna1
@@ -213,13 +213,13 @@ function addqna3Result_Page() {
 
 // result & introduction
 function resultIntro_next() {
-  result.style.WebkitAnimation = "fadeOut 1s";
-  result.style.animation = "fadeOut 1s";
+  plantResult.style.WebkitAnimation = "fadeOut 1s";
+  plantResult.style.animation = "fadeOut 1s";
   setTimeout(() => {
     introduction.style.WebkitAnimation = "fadeIn 1s";
     introduction.style.animation = "fadeIn 1s";
     setTimeout(() => {
-      result.style.display = "none";
+      plantResult.style.display = "none";
       introduction.style.display = "block";
     }, 450)
   }, 450);
