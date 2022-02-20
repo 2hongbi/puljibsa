@@ -38,19 +38,8 @@ function qna1Main_pre() {
   }, 450);
 }
 
-/* 원하는 체크박스 선택 후 -> 다음 버튼 누르면 결과 나오게 if문 걸기
-function checkBox(){
-  $("#ckbNextBtn").click(function(){
-      if($("#diagnosis").is(":checked") == true){
-          window.location.href = './../web/index.html'
-      }else($("#service").is(":checked") == true){
-           window.location.href = './../web/introduction.html'
-      }
-  });
-} */
 
-//1. 풀집사 서비스 소개를 선택했을 때(첫번째 체크박스 결과)
-//체크박스 자체에 url 연결
+//1. 풀집사 서비스 소개를 선택했을 때
 function MainPage_return() {
   window.location.href = './../web/index.html'
 }
