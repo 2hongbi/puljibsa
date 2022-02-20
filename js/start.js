@@ -7,7 +7,9 @@ const main = document.querySelector("#main")
 const qna1 = document.querySelector("#qna1")
 const qna2 = document.querySelector("#qna2")
 const insert_pic = document.querySelector("#insert-pic")
-const addition_qna = document.querySelector("#addition-qna")
+const addition_qna1 = document.querySelector("#addition-qna")
+const addition_qna2 = document.querySelector("#addition-qna2")
+const addition_qna3 = document.querySelector("#addition-qna3")
 const result = document.querySelector("#plantResult")
 const introduction = document.querySelector("#introduction")
 
@@ -106,62 +108,105 @@ function insertQna2_pre() {
 }
 
 
-//insert_pic & addition_qna
-function insertAddqna_next() {
+//insert_pic & addition_qna1
+function insertAddqna1_next() {
   insert_pic.style.WebkitAnimation = "fadeOut 1s";
   insert_pic.style.animation = "fadeOut 1s";
   setTimeout(() => {
-    addition_qna.style.WebkitAnimation = "fadeIn 1s";
-    addition_qna.style.animation = "fadeIn 1s";
+    addition_qna1.style.WebkitAnimation = "fadeIn 1s";
+    addition_qna1.style.animation = "fadeIn 1s";
     setTimeout(() => {
       insert_pic.style.display = "none";
-      addition_qna.style.display = "block";
+      addition_qna1.style.display = "block";
     }, 450)
   }, 450);
 }
 
-function addqnaInsert_pre() {
-  addition_qna.style.WebkitAnimation = "fadeOut 1s";
-  addition_qna.style.animation = "fadeOut 1s";
+function addqna1Insert_pre() {
+  addition_qna1.style.WebkitAnimation = "fadeOut 1s";
+  addition_qna1.style.animation = "fadeOut 1s";
   setTimeout(() => {
     insert_pic.style.WebkitAnimation = "fadeIn 1s";
     insert_pic.style.animation = "fadeIn 1s";
     setTimeout(() => {
-      addition_qna.style.display = "none";
+      addition_qna1.style.display = "none";
       insert_pic.style.display = "block";
     }, 450)
   }, 450);
 }
 
 
-//addition_qna & result
-function addqnaResult_next() {
-  addition_qna.style.WebkitAnimation = "fadeOut 1s";
-  addition_qna.style.animation = "fadeOut 1s";
+//addition_qna1&2
+function addqna12_next() {
+  addition_qna1.style.WebkitAnimation = "fadeOut 1s";
+  addition_qna1.style.animation = "fadeOut 1s";
+  setTimeout(() => {
+    addition_qna2.style.WebkitAnimation = "fadeIn 1s";
+    addition_qna2.style.animation = "fadeIn 1s";
+    setTimeout(() => {
+      addition_qna1.style.display = "none";
+      addition_qna2.style.display = "block";
+    }, 450)
+  }, 450);
+}
+
+function addqna21_pre() {
+  addition_qna2.style.WebkitAnimation = "fadeOut 1s";
+  addition_qna2.style.animation = "fadeOut 1s";
+  setTimeout(() => {
+    addition_qna1.style.WebkitAnimation = "fadeIn 1s";
+    addition_qna1.style.animation = "fadeIn 1s";
+    setTimeout(() => {
+      addition_qna2.style.display = "none";
+      addition_qna1.style.display = "block";
+    }, 450)
+  }, 450);
+}
+
+
+//addition_qna2&3
+function addqna23_next() {
+  addition_qna2.style.WebkitAnimation = "fadeOut 1s";
+  addition_qna2.style.animation = "fadeOut 1s";
+  setTimeout(() => {
+    addition_qna3.style.WebkitAnimation = "fadeIn 1s";
+    addition_qna3.style.animation = "fadeIn 1s";
+    setTimeout(() => {
+      addition_qna2.style.display = "none";
+      addition_qna3.style.display = "block";
+    }, 450)
+  }, 450);
+}
+
+function addqna32_pre() {
+  addition_qna3.style.WebkitAnimation = "fadeOut 1s";
+  addition_qna3.style.animation = "fadeOut 1s";
+  setTimeout(() => {
+    addition_qna2.style.WebkitAnimation = "fadeIn 1s";
+    addition_qna2.style.animation = "fadeIn 1s";
+    setTimeout(() => {
+      addition_qna3.style.display = "none";
+      addition_qna2.style.display = "block";
+    }, 450)
+  }, 450);
+}
+
+
+//addition_qna3 & result
+function addqna3Result_next() {
+  addition_qna3.style.WebkitAnimation = "fadeOut 1s";
+  addition_qna3.style.animation = "fadeOut 1s";
   setTimeout(() => {
     result.style.WebkitAnimation = "fadeIn 1s";
     result.style.animation = "fadeIn 1s";
     setTimeout(() => {
-      addition_qna.style.display = "none";
+      addition_qna3.style.display = "none";
       result.style.display = "block";
     }, 450)
   }, 450);
 }
 
-function resultAddqna_pre() {
-  result.style.WebkitAnimation = "fadeOut 1s";
-  result.style.animation = "fadeOut 1s";
-  setTimeout(() => {
-    addition_qna.style.WebkitAnimation = "fadeIn 1s";
-    addition_qna.style.animation = "fadeIn 1s";
-    setTimeout(() => {
-      result.style.display = "none";
-      addition_qna.style.display = "block";
-    }, 450)
-  }, 450);
-}
-
-function addqnaResult_Page() {
+function addqna3Result_Page() {
   window.location.href = './../web/result.html'
 }
 
