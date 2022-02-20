@@ -83,6 +83,10 @@ th, td {
   margin-bottom: 45px;
 }
 
+.statePrint {
+  color: chocolate;
+}
+
 /* mobile (max-width: 400px) */
 @media screen and (max-width:450px) {
 
@@ -144,3 +148,4 @@ th, td {
   position:relative;
   top:1px;
 }
+

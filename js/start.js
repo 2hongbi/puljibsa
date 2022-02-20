@@ -13,6 +13,7 @@ const addition_qna3 = document.querySelector("#addition-qna3")
 const plantResult = document.querySelector("#plantResult")
 const introduction = document.querySelector("#introduction")
 
+
 //main & qna1
 function begin() {
   main.style.WebkitAnimation = "fadeOut 1s";
