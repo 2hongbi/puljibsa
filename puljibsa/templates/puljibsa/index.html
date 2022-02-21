@@ -51,17 +51,14 @@
 <div class="expert mt-10 mx-auto mb-5">
   <img src="{% static 'img/expert.png' %}" alt="expertImg" class="img-fluid">
   <p class="mb-5s">
-    풀님에게 해당되는 증상에<br>
-    <b>모두</b> 체크해주세요.
+    {{qs_1}}
   </p>
 </div>
 
 <div class="only-checkbox">
-  <input type="checkbox" name="state" value="a" onclick="checkOnlyOne(this)"> 잎이 노랗게 변했어요. <br>
-  <input type="checkbox" name="state" value="b" onclick="checkOnlyOne(this)"> 잎이 힘없이 축 늘어졌어요. <br>
-  <input type="checkbox" name="state" value="c" onclick="checkOnlyOne(this)"> 줄기에 하얀 벌레가 생겼어요. <br>
-  <input type="checkbox" name="state" value="d" onclick="checkOnlyOne(this)"> 화분 속 흙이 하얗게 변했어요. <br>
-  <input type="checkbox" name="state" value="e" onclick="checkOnlyOne(this)"> 증상이 없어요.
+  {% for answer in qs_1.answer_set.all %}
+    <input type="checkbox" name="question-{{qs_1.question_id}}" value="{{answer.pk}}" onclick="checkOnlyOne(this)">&nbsp;&nbsp;{{answer}}<br>
+  {% endfor %}
 </div>
 
 <button type="button" class="prev-btn btn btn-light mt-5" onclick="qna2Qna1_pre();">이전</button>
@@ -90,7 +87,7 @@
 </div>
 
 <button type="button" class="prev-btn btn btn-light mt-5" onclick="insertQna2_pre();">이전</button>
-<button type="button" class="next-btn btn btn-light mt-5" onclick="insertAddqna_next();">다음</button>
+<button type="button" class="next-btn btn btn-light mt-5" onclick="insertAddqna1_next();">다음</button>
 
 </section>
 
@@ -98,20 +95,60 @@
 <section id='addition-qna' class="mx-auto">
 <div id="addition">
   <p>첫번째 <b>추가 질문</b> 입니다.</p>
-  <p>풀님에게 어느 정도의 주기로 물을 주나요?</p>
+  <p>{{qs_2}}</p>
 </div>
 <div class="content">
   <div class="col-md-auto character-img">
     <img src="{% static 'img/character.png' %}" alt="풀집사캐릭터" class="img-fluid img-small">
   </div>
   <div class="col-md-auto checkbox-with-img">
-    <input type="checkbox" name="addition_qna1" value="a" onclick="checkOnlyOne(this)"> 한 달에 한 번이요.<br>
-    <input type="checkbox" name="addition_qna1" value="b" onclick="checkOnlyOne(this)"> 두 주에 한 번보다 자주요.<br>
-    <input type="checkbox" name="addition_qna1" value="c" onclick="checkOnlyOne(this)"> 잘 모르겠어요.
+    {% for answer in qs_2.answer_set.all %}
+      <input type="checkbox" name="question-{{qs_2.question_id}}" value="{{answer.pk}}" onclick="checkOnlyOne(this)">&nbsp;&nbsp;{{answer}}<br>
+    {% endfor %}
   </div>
 </div>
-<button type="button" class="prev-btn btn btn-light mt-5" onclick="addqnaInsert_pre();">이전</button>
-<button type="button" class="next-btn btn btn-light mt-5" onclick="each_check(); addqnaResult_next(); addqnaResult_Page();">다음</button>
+<button type="button" class="prev-btn btn btn-light mt-5" onclick="addqna1Insert_pre();">이전</button>
+<button type="button" class="next-btn btn btn-light mt-5" onclick="each_check(); addqna12_next();">다음</button>
+</section>
+
+<!-- Additional question 2 -->
+<section id='addition-qna2' class="mx-auto">
+  <div id="addition2">
+    <p>두번째 <b>추가 질문</b> 입니다.</p>
+    <p>{{qs_3}}</p>
+  </div>
+  <div class="content">
+    <div class="col-md-auto character-img">
+      <img src="{% static '/img/character.png' %}" alt="풀집사캐릭터" class="img-fluid img-small">
+    </div>
+    <div class="col-md-auto checkbox-with-img">
+      {% for answer in qs_3.answer_set.all %}
+        <input type="checkbox" name="question-{{qs_3.question_id}}" value="{{answer.pk}}" onclick="checkOnlyOne(this)">&nbsp;&nbsp;{{answer}}<br>
+      {% endfor %}
+    </div>
+  </div>
+  <button type="button" class="prev-btn btn btn-light mt-5" onclick="addqna21_pre();">이전</button>
+  <button type="button" class="next-btn btn btn-light mt-5" onclick="each_check(); addqna23_next();">다음</button>
+</section>
+
+<!-- Additional question 3 -->
+<section id='addition-qna3' class="mx-auto">
+  <div id="addition3">
+    <p>마지막 <b>추가 질문</b> 입니다.</p>
+    <p>{{qs_4}}</p>
+  </div>
+  <div class="content">
+    <div class="col-md-auto character-img">
+      <img src="{% static '/img/character.png' %}" alt="풀집사캐릭터" class="img-fluid img-small">
+    </div>
+    <div class="col-md-auto checkbox-with-img">
+      {% for answer in qs_4.answer_set.all %}
+        <input type="checkbox" name="question-{{qs_4.question_id}}" value="{{answer.pk}}" onclick="checkOnlyOne(this)">&nbsp;&nbsp;{{answer}}<br>
+      {% endfor %}
+    </div>
+  </div>
+  <button type="button" class="prev-btn btn btn-light mt-5" onclick="addqna32_pre();">이전</button>
+  <button type="button" class="next-btn btn btn-light mt-5" onclick="each_check(); addqna3Result_next(); addqna3Result_Page();">다음</button>
 </section>
 
 <!-- Loading page -->
