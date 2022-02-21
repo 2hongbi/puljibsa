@@ -46,7 +46,7 @@ function checkOnlyOne(element) {
 }
 
 
-function each_check() {
+/*function each_check() {
     $("input[name=qna1_check]:checked").each(function () {
         var test = $(this).val();
         console.log("체크된 값 : " + test);
@@ -71,12 +71,24 @@ function each_check() {
         var test = $(this).val();
         console.log("체크된 값 : " + test);
     });
-}
+}*/
 
-
+var arTest = [];
 function total(){
-    var arTest = [];
+
     $("input[name=state]:checked").each(function () {
+        arTest.push($(this).val());
+    });
+
+    $("input[name=addition_qna]:checked").each(function () {
+        arTest.push($(this).val());
+    });
+
+    $("input[name=addition_qna2]:checked").each(function () {
+        arTest.push($(this).val());
+    });
+
+    $("input[name=addition_qna3]:checked").each(function () {
         arTest.push($(this).val());
     });
     console.log("체크된 값 total : " + arTest);
