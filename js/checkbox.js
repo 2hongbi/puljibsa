@@ -1,18 +1,84 @@
-/*function get_checked(){
+function qna1_get_checked() {
+    var found = null;
+    var check_qna1 = document.getElementsByName("qna1_check");
+
+    for (var i = 0; i < check_qna1.length; i++) {
+        if (check_qna1[i].checked) {
+            found = check_qna1[i];
+        }
+    }
+    if (found != null) {
+        return qna1Qna2_next();
+    } else {
+        alert("답변을 선택해주세요.");
+        return false;
+    }
+}
+
+function state_get_checked() {
     var found = null;
     var check_state = document.getElementsByName("state");
-
-    for(var i =0; i<check_state.length; i++) {
-        if(check_state[i].checked){
+    for (var i = 0; i < check_state.length; i++) {
+        if (check_state[i].checked) {
             found = check_state[i];
         }
     }
     if (found != null) {
+        return qna2Insert_next();
     } else {
-    alert("답변을 선택해주세요.");
-    return false;
-  }
-}*/
+        alert("답변을 선택해주세요.");
+        return false;
+    }
+}
+
+function addition_qna_get_checked() {
+    var found = null;
+    var check_addition_qna = document.getElementsByName("addition_qna");
+    for (var i = 0; i < check_addition_qna.length; i++) {
+        if (check_addition_qna[i].checked) {
+            found = check_addition_qna[i];
+        }
+    }
+    if (found != null) {
+        return addqna12_next();
+    } else {
+        alert("답변을 선택해주세요.");
+        return false;
+    }
+}
+
+function addition_qna2_get_checked() {
+    var found = null;
+    var check_addition_qna2 = document.getElementsByName("addition_qna2");
+    for (var i = 0; i < check_addition_qna2.length; i++) {
+        if (check_addition_qna2[i].checked) {
+            found = check_addition_qna2[i];
+        }
+    }
+    if (found != null) {
+        return addqna23_next();
+        ;
+    } else {
+        alert("답변을 선택해주세요.");
+        return false;
+    }
+}
+
+function addition_qna3_get_checked() {
+    var found = null;
+    var check_addition_qna3 = document.getElementsByName("addition_qna3");
+    for (var i = 0; i < check_addition_qna3.length; i++) {
+        if (check_addition_qna3[i].checked) {
+            found = check_addition_qna3[i];
+        }
+    }
+    if (found != null) {
+        return [addqna3Result_next(), addqna3Result_Page()];
+    } else {
+        alert("답변을 선택해주세요.");
+        return false;
+    }
+}
 
 function checkOnlyOne(element) {
     const qna1_checkboxes
@@ -35,10 +101,30 @@ function checkOnlyOne(element) {
     element.checked = true;
 
 
-    const addition_qna_checkboxes
+    const addition_qna_checkbox
         = document.getElementsByName("addition_qna");
 
-    addition_qna_checkboxes.forEach((cb) => {
+    addition_qna_checkbox.forEach((cb) => {
+        cb.checked = false;
+    })
+
+    element.checked = true;
+
+
+    const addition_qna2_checkbox
+        = document.getElementsByName("addition_qna2");
+
+    addition_qna2_checkbox.forEach((cb) => {
+        cb.checked = false;
+    })
+
+    element.checked = true;
+
+
+    const addition_qna3_checkbox
+        = document.getElementsByName("addition_qna3");
+
+    addition_qna3_checkbox.forEach((cb) => {
         cb.checked = false;
     })
 
@@ -74,7 +160,8 @@ function checkOnlyOne(element) {
 }*/
 
 var arTest = [];
-function total(){
+
+function total() {
 
     $("input[name=state]:checked").each(function () {
         arTest.push($(this).val());

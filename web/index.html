@@ -67,7 +67,7 @@
       </div>
     </div>
     <button type="button" class="prev-btn btn btn-light mt-5" onclick="qna1Main_pre();">이전</button>
-    <button type="button" class="next-btn btn btn-light mt-5" onclick="qna1Qna2_next();">다음</button>
+    <button type="button" class="next-btn btn btn-light mt-5" onclick="qna1_get_checked();/*qna1Qna2_next();*/">다음</button>
   </div>
 
   <!-- ******qna2****** -->
@@ -89,7 +89,7 @@
     </div>
 
     <button type="button" class="prev-btn btn btn-light mt-5" onclick="qna2Qna1_pre();">이전</button>
-    <button type="button" class="next-btn btn btn-light mt-5" onclick="total(); qna2Insert_next();">다음</button>
+    <button type="button" class="next-btn btn btn-light mt-5" onclick="total(); state_get_checked();/*qna2Insert_next();*/">다음</button>
   </div>
 
   <!-- ******insert-pic****** -->
@@ -136,7 +136,7 @@
       </div>
     </div>
     <button type="button" class="prev-btn btn btn-light mt-5" onclick="addqna1Insert_pre();">이전</button>
-    <button type="button" class="next-btn btn btn-light mt-5" onclick="total(); addqna12_next();">다음</button>
+    <button type="button" class="next-btn btn btn-light mt-5" onclick="total(); addition_qna_get_checked();/*addqna12_next();*/">다음</button>
   </section>
 
     <!-- ******addition-qna2****** -->
@@ -150,13 +150,13 @@
         <img src="./../img/character.png" alt="풀집사캐릭터" class="img-fluid img-small">
       </div>
       <div class="col-md-auto checkbox-with-img">
-        <input type="checkbox" name="addition_qna" value="a" onclick="checkOnlyOne(this)"> 화분 안의 흙이 다 젖을 정도로 줘요.<br>
-        <input type="checkbox" name="addition_qna" value="b" onclick="checkOnlyOne(this)"> 겉 흙만 젖을 정도로 줘요.<br>
-        <input type="checkbox" name="addition_qna" value="c" onclick="checkOnlyOne(this)"> 잘 모르겠어요.
+        <input type="checkbox" name="addition_qna2" value="a" onclick="checkOnlyOne(this)"> 화분 안의 흙이 다 젖을 정도로 줘요.<br>
+        <input type="checkbox" name="addition_qna2" value="b" onclick="checkOnlyOne(this)"> 겉 흙만 젖을 정도로 줘요.<br>
+        <input type="checkbox" name="addition_qna2" value="c" onclick="checkOnlyOne(this)"> 잘 모르겠어요.
       </div>
     </div>
     <button type="button" class="prev-btn btn btn-light mt-5" onclick="addqna21_pre();">이전</button>
-    <button type="button" class="next-btn btn btn-light mt-5" onclick="total(); addqna23_next();">다음</button>
+    <button type="button" class="next-btn btn btn-light mt-5" onclick="total(); addition_qna2_get_checked();/*addqna23_next();*/">다음</button>
   </section>
 
     <!-- ******addition-qna3****** -->
@@ -170,13 +170,13 @@
         <img src="./../img/character.png" alt="풀집사캐릭터" class="img-fluid img-small">
       </div>
       <div class="col-md-auto checkbox-with-img">
-        <input type="checkbox" name="addition_qna" value="a" onclick="checkOnlyOne(this)"> 햇빛을 직접적으로 받는 곳이요.<br>
-        <input type="checkbox" name="addition_qna" value="b" onclick="checkOnlyOne(this)"> 유리창, 얇은 커튼 등을 통해 햇빛을 간접적으로 받는 곳이요.<br>
-        <input type="checkbox" name="addition_qna" value="c" onclick="checkOnlyOne(this)"> 그늘진 곳이요.
+        <input type="checkbox" name="addition_qna3" value="a" onclick="checkOnlyOne(this)"> 햇빛을 직접적으로 받는 곳이요.<br>
+        <input type="checkbox" name="addition_qna3" value="b" onclick="checkOnlyOne(this)"> 유리창, 얇은 커튼 등을 통해 햇빛을 간접적으로 받는 곳이요.<br>
+        <input type="checkbox" name="addition_qna3" value="c" onclick="checkOnlyOne(this)"> 그늘진 곳이요.
       </div>
     </div>
     <button type="button" class="prev-btn btn btn-light mt-5" onclick="addqna32_pre();">이전</button>
-    <button type="button" class="next-btn btn btn-light mt-5" onclick="total(); addqna3Result_next(); addqna3Result_Page();">다음</button>
+    <button type="button" class="next-btn btn btn-light mt-5" onclick="total(); addition_qna3_get_checked(); /*addqna3Result_next(); addqna3Result_Page();*/">다음</button>
   </section>
 
   <!-- ******loading****** -->
