@@ -48,7 +48,6 @@ function stateCheckbox(state) {
 
   document.getElementById('result').innerText
     = result;
-}*/
 
 function getValue(){
  
@@ -58,4 +57,4 @@ function getValue(){
       console.log($(this).val() );
   });
 
-}
+} }*/
