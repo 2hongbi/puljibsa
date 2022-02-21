@@ -1,10 +1,18 @@
+var script = document.createElement('script');
+script.src = 'https://code.jquery.com/jquery-3.4.1.min.js';
+script.type = 'text/javascript';
+document.getElementsByTagName('head')[0].appendChild(script);
+
 const main = document.querySelector("#main")
 const qna1 = document.querySelector("#qna1")
 const qna2 = document.querySelector("#qna2")
 const insert_pic = document.querySelector("#insert-pic")
-const addition_qna = document.querySelector("#addition-qna")
-const result = document.querySelector("#plantResult")
+const addition_qna1 = document.querySelector("#addition-qna")
+const addition_qna2 = document.querySelector("#addition-qna2")
+const addition_qna3 = document.querySelector("#addition-qna3")
+const plantResult = document.querySelector("#plantResult")
 const introduction = document.querySelector("#introduction")
+
 
 //main & qna1
 function begin() {
@@ -33,21 +41,10 @@ function qna1Main_pre() {
   }, 450);
 }
 
-/* 원하는 체크박스 선택 후 -> 다음 버튼 누르면 결과 나오게 if문 걸기
-function checkBox(){
-  $("#ckbNextBtn").click(function(){
-      if($("#diagnosis").is(":checked") == true){
-          window.location.href = './../web/index.html'
-      }else($("#service").is(":checked") == true){
-           window.location.href = './../web/introduction.html'
-      }
-  });
-} */
 
-//1. 풀집사 서비스 소개를 선택했을 때(첫번째 체크박스 결과)
-//체크박스 자체에 url 연결
+//1. 풀집사 서비스 소개를 선택했을 때
 function MainPage_return() {
-  window.location.href = '/'
+  window.location.href = './../web/index.html'
 }
 
 
@@ -55,7 +52,7 @@ function MainPage_return() {
 function qna1Qna2_next() {
   const introCheck = document.getElementsByName("qna1_check")[1];
   if(introCheck.checked === true) {
-    window.location.href = 'introduction/'
+    window.location.href = './../web/introduction.html'
   }else{
     qna1.style.WebkitAnimation = "fadeOut 1s";
     qna1.style.animation = "fadeOut 1s";
@@ -112,80 +109,123 @@ function insertQna2_pre() {
 }
 
 
-//insert_pic & addition_qna
-function insertAddqna_next() {
+//insert_pic & addition_qna1
+function insertAddqna1_next() {
   insert_pic.style.WebkitAnimation = "fadeOut 1s";
   insert_pic.style.animation = "fadeOut 1s";
   setTimeout(() => {
-    addition_qna.style.WebkitAnimation = "fadeIn 1s";
-    addition_qna.style.animation = "fadeIn 1s";
+    addition_qna1.style.WebkitAnimation = "fadeIn 1s";
+    addition_qna1.style.animation = "fadeIn 1s";
     setTimeout(() => {
       insert_pic.style.display = "none";
-      addition_qna.style.display = "block";
+      addition_qna1.style.display = "block";
     }, 450)
   }, 450);
 }
 
-function addqnaInsert_pre() {
-  addition_qna.style.WebkitAnimation = "fadeOut 1s";
-  addition_qna.style.animation = "fadeOut 1s";
+function addqna1Insert_pre() {
+  addition_qna1.style.WebkitAnimation = "fadeOut 1s";
+  addition_qna1.style.animation = "fadeOut 1s";
   setTimeout(() => {
     insert_pic.style.WebkitAnimation = "fadeIn 1s";
     insert_pic.style.animation = "fadeIn 1s";
     setTimeout(() => {
-      addition_qna.style.display = "none";
+      addition_qna1.style.display = "none";
       insert_pic.style.display = "block";
     }, 450)
   }, 450);
 }
 
 
-//addition_qna & result
-function addqnaResult_next() {
-  addition_qna.style.WebkitAnimation = "fadeOut 1s";
-  addition_qna.style.animation = "fadeOut 1s";
+//addition_qna1&2
+function addqna12_next() {
+  addition_qna1.style.WebkitAnimation = "fadeOut 1s";
+  addition_qna1.style.animation = "fadeOut 1s";
+  setTimeout(() => {
+    addition_qna2.style.WebkitAnimation = "fadeIn 1s";
+    addition_qna2.style.animation = "fadeIn 1s";
+    setTimeout(() => {
+      addition_qna1.style.display = "none";
+      addition_qna2.style.display = "block";
+    }, 450)
+  }, 450);
+}
+
+function addqna21_pre() {
+  addition_qna2.style.WebkitAnimation = "fadeOut 1s";
+  addition_qna2.style.animation = "fadeOut 1s";
+  setTimeout(() => {
+    addition_qna1.style.WebkitAnimation = "fadeIn 1s";
+    addition_qna1.style.animation = "fadeIn 1s";
+    setTimeout(() => {
+      addition_qna2.style.display = "none";
+      addition_qna1.style.display = "block";
+    }, 450)
+  }, 450);
+}
+
+
+//addition_qna2&3
+function addqna23_next() {
+  addition_qna2.style.WebkitAnimation = "fadeOut 1s";
+  addition_qna2.style.animation = "fadeOut 1s";
+  setTimeout(() => {
+    addition_qna3.style.WebkitAnimation = "fadeIn 1s";
+    addition_qna3.style.animation = "fadeIn 1s";
+    setTimeout(() => {
+      addition_qna2.style.display = "none";
+      addition_qna3.style.display = "block";
+    }, 450)
+  }, 450);
+}
+
+function addqna32_pre() {
+  addition_qna3.style.WebkitAnimation = "fadeOut 1s";
+  addition_qna3.style.animation = "fadeOut 1s";
+  setTimeout(() => {
+    addition_qna2.style.WebkitAnimation = "fadeIn 1s";
+    addition_qna2.style.animation = "fadeIn 1s";
+    setTimeout(() => {
+      addition_qna3.style.display = "none";
+      addition_qna2.style.display = "block";
+    }, 450)
+  }, 450);
+}
+
+
+//addition_qna3 & result
+function addqna3Result_next() {
+  addition_qna3.style.WebkitAnimation = "fadeOut 1s";
+  addition_qna3.style.animation = "fadeOut 1s";
   setTimeout(() => {
     result.style.WebkitAnimation = "fadeIn 1s";
     result.style.animation = "fadeIn 1s";
     setTimeout(() => {
-      addition_qna.style.display = "none";
+      addition_qna3.style.display = "none";
       result.style.display = "block";
     }, 450)
   }, 450);
 }
 
-function resultAddqna_pre() {
-  result.style.WebkitAnimation = "fadeOut 1s";
-  result.style.animation = "fadeOut 1s";
-  setTimeout(() => {
-    addition_qna.style.WebkitAnimation = "fadeIn 1s";
-    addition_qna.style.animation = "fadeIn 1s";
-    setTimeout(() => {
-      result.style.display = "none";
-      addition_qna.style.display = "block";
-    }, 450)
-  }, 450);
-}
-
-function addqnaResult_Page() {
-  window.location.href = 'result/'
+function addqna3Result_Page() {
+  window.location.href = './../web/result.html'
 }
 
 
 // result & introduction
 function resultIntro_next() {
-  result.style.WebkitAnimation = "fadeOut 1s";
-  result.style.animation = "fadeOut 1s";
+  plantResult.style.WebkitAnimation = "fadeOut 1s";
+  plantResult.style.animation = "fadeOut 1s";
   setTimeout(() => {
     introduction.style.WebkitAnimation = "fadeIn 1s";
     introduction.style.animation = "fadeIn 1s";
     setTimeout(() => {
-      result.style.display = "none";
+      plantResult.style.display = "none";
       introduction.style.display = "block";
     }, 450)
   }, 450);
 }
 
 function resultIntro_Page() {
-  window.location.href = 'introduction/'
+  window.location.href = './../web/introduction.html'
 }

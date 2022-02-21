@@ -37,3 +37,25 @@ function printResult(plantType, plantSym,resultNum){
   pre.innerHTML = result[resultNum].precaution;
   more.innerHTML = result[resultNum].moreInfo;
 }
+
+//체크박스 선택값 불러오기
+/*
+function stateCheckbox(state) {
+  let result = '';
+  if(state.target.checked) {
+    result = state.target.value;
+  }
+
+  document.getElementById('result').innerText
+    = result;
+}*/
+
+function getValue(){
+
+  console.log( $(":input:checkbox[name=state]:checked").val() );
+
+  $("input[name=state]:checked").each(function() {
+      console.log($(this).val() );
+  });
+
+}
