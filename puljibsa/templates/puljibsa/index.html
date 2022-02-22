@@ -43,7 +43,7 @@
   </div>
 </div>
 <button type="button" class="prev-btn btn btn-light mt-5" onclick="qna1Main_pre();">이전</button>
-<button type="button" class="next-btn btn btn-light mt-5" onclick="qna1Qna2_next();">다음</button>
+<button type="button" class="next-btn btn btn-light mt-5" onclick="qna1_get_checked();/*qna1Qna2_next();*/">다음</button>
 </div>
 
 <!-- QnA 2 -->
@@ -62,7 +62,7 @@
 </div>
 
 <button type="button" class="prev-btn btn btn-light mt-5" onclick="qna2Qna1_pre();">이전</button>
-<button type="button" class="next-btn btn btn-light mt-5" onclick="each_check(); qna2Insert_next();">다음</button>
+<button type="button" class="next-btn btn btn-light mt-5" onclick="total(); state_get_checked();/*qna2Insert_next();*/">다음</button>
 </div>
 
 <!-- Insert Picture -->
@@ -108,7 +108,7 @@
   </div>
 </div>
 <button type="button" class="prev-btn btn btn-light mt-5" onclick="addqna1Insert_pre();">이전</button>
-<button type="button" class="next-btn btn btn-light mt-5" onclick="each_check(); addqna12_next();">다음</button>
+<button type="button" class="next-btn btn btn-light mt-5" onclick="total(); addition_qna_get_checked();/*addqna12_next();*/">다음</button>
 </section>
 
 <!-- Additional question 2 -->
@@ -128,7 +128,7 @@
     </div>
   </div>
   <button type="button" class="prev-btn btn btn-light mt-5" onclick="addqna21_pre();">이전</button>
-  <button type="button" class="next-btn btn btn-light mt-5" onclick="each_check(); addqna23_next();">다음</button>
+  <button type="button" class="next-btn btn btn-light mt-5" onclick="total(); addition_qna2_get_checked();/*addqna23_next();*/">다음</button>
 </section>
 
 <!-- Additional question 3 -->
@@ -148,7 +148,7 @@
     </div>
   </div>
   <button type="button" class="prev-btn btn btn-light mt-5" onclick="addqna32_pre();">이전</button>
-  <button type="button" class="next-btn btn btn-light mt-5" onclick="each_check(); addqna3Result_next(); addqna3Result_Page();">다음</button>
+  <button type="button" class="next-btn btn btn-light mt-5" onclick="total(); addition_qna3_get_checked(); /*addqna3Result_next(); addqna3Result_Page();*/">다음</button>
 </section>
 
 <!-- Loading page -->

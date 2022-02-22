@@ -52,7 +52,7 @@ function MainPage_return() {
 function qna1Qna2_next() {
   const introCheck = document.getElementsByName("qna1_check")[1];
   if(introCheck.checked === true) {
-    window.location.href = "introduction/";
+    window.location.href = 'introduction/';
   }else{
     qna1.style.WebkitAnimation = "fadeOut 1s";
     qna1.style.animation = "fadeOut 1s";
