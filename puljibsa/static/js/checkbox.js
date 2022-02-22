@@ -1,6 +1,6 @@
 function qna1_get_checked() {
     var found = null;
-    var check_qna1 = document.getElementsByName("qna1_check");
+    var check_qna1 = document.getElementsByName("qna0_check");
 
     for (var i = 0; i < check_qna1.length; i++) {
         if (check_qna1[i].checked) {
@@ -17,7 +17,7 @@ function qna1_get_checked() {
 
 function state_get_checked() {
     var found = null;
-    var check_state = document.getElementsByName("state");
+    var check_state = document.getElementsByName("qna1_check");
     for (var i = 0; i < check_state.length; i++) {
         if (check_state[i].checked) {
             found = check_state[i];
@@ -33,7 +33,7 @@ function state_get_checked() {
 
 function addition_qna_get_checked() {
     var found = null;
-    var check_addition_qna = document.getElementsByName("addition_qna");
+    var check_addition_qna = document.getElementsByName("qna2_check");
     for (var i = 0; i < check_addition_qna.length; i++) {
         if (check_addition_qna[i].checked) {
             found = check_addition_qna[i];
@@ -49,7 +49,7 @@ function addition_qna_get_checked() {
 
 function addition_qna2_get_checked() {
     var found = null;
-    var check_addition_qna2 = document.getElementsByName("addition_qna2");
+    var check_addition_qna2 = document.getElementsByName("qna3_check");
     for (var i = 0; i < check_addition_qna2.length; i++) {
         if (check_addition_qna2[i].checked) {
             found = check_addition_qna2[i];
@@ -66,7 +66,7 @@ function addition_qna2_get_checked() {
 
 function addition_qna3_get_checked() {
     var found = null;
-    var check_addition_qna3 = document.getElementsByName("addition_qna3");
+    var check_addition_qna3 = document.getElementsByName("qna4_check");
     for (var i = 0; i < check_addition_qna3.length; i++) {
         if (check_addition_qna3[i].checked) {
             found = check_addition_qna3[i];
@@ -81,8 +81,7 @@ function addition_qna3_get_checked() {
 }
 
 function checkOnlyOne(element) {
-    const qna1_checkboxes
-        = document.getElementsByName("qna1_check");
+    const qna1_checkboxes = document.getElementsByName("qna0_check");
 
     qna1_checkboxes.forEach((cb) => {
         cb.checked = false;
@@ -90,9 +89,7 @@ function checkOnlyOne(element) {
 
     element.checked = true;
 
-
-    const qna2_checkboxes
-        = document.getElementsByName("state");
+    const qna2_checkboxes = document.getElementsByName("qna1_check");
 
     qna2_checkboxes.forEach((cb) => {
         cb.checked = false;
@@ -100,9 +97,7 @@ function checkOnlyOne(element) {
 
     element.checked = true;
 
-
-    const addition_qna_checkbox
-        = document.getElementsByName("addition_qna");
+    const addition_qna_checkbox = document.getElementsByName("qna2_check");
 
     addition_qna_checkbox.forEach((cb) => {
         cb.checked = false;
@@ -110,9 +105,7 @@ function checkOnlyOne(element) {
 
     element.checked = true;
 
-
-    const addition_qna2_checkbox
-        = document.getElementsByName("addition_qna2");
+    const addition_qna2_checkbox = document.getElementsByName("qna3_check");
 
     addition_qna2_checkbox.forEach((cb) => {
         cb.checked = false;
@@ -120,14 +113,11 @@ function checkOnlyOne(element) {
 
     element.checked = true;
 
-
-    const addition_qna3_checkbox
-        = document.getElementsByName("addition_qna3");
+    const addition_qna3_checkbox = document.getElementsByName("qna4_check");
 
     addition_qna3_checkbox.forEach((cb) => {
         cb.checked = false;
     })
-
     element.checked = true;
 }
 

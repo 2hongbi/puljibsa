@@ -38,8 +38,8 @@
     <img src="{% static 'img/character.png' %}" alt="풀집사캐릭터" class="img-fluid img-small">
   </div>
   <div class="col-md-auto checkbox-with-img">
-    <input type="checkbox" name="qna1_check" value="a" onclick="checkOnlyOne(this);"> 상태진단 해주세요. <br>
-    <input type="checkbox" name="qna1_check" value="b" onclick="checkOnlyOne(this);"> 풀집사 서비스가 궁금해요.
+    <input type="checkbox" name="qna0_check" value="a" onclick="checkOnlyOne(this);"> 상태진단 해주세요. <br>
+    <input type="checkbox" name="qna0_check" value="b" onclick="checkOnlyOne(this);"> 풀집사 서비스가 궁금해요.
   </div>
 </div>
 <button type="button" class="prev-btn btn btn-light mt-5" onclick="qna1Main_pre();">이전</button>
@@ -57,7 +57,7 @@
 
 <div class="only-checkbox">
   {% for answer in qs_1.answer_set.all %}
-    <input type="checkbox" name="question-{{qs_1.question_id}}" value="{{answer.pk}}" onclick="checkOnlyOne(this)">&nbsp;&nbsp;{{answer}}<br>
+    <input type="checkbox" name="qna{{qs_1.question_id}}_check" value="{{answer.pk}}" onclick="checkOnlyOne(this)">&nbsp;&nbsp;{{answer}}<br>
   {% endfor %}
 </div>
 
@@ -103,7 +103,7 @@
   </div>
   <div class="col-md-auto checkbox-with-img">
     {% for answer in qs_2.answer_set.all %}
-      <input type="checkbox" name="question-{{qs_2.question_id}}" value="{{answer.pk}}" onclick="checkOnlyOne(this)">&nbsp;&nbsp;{{answer}}<br>
+      <input type="checkbox" name="qna{{qs_2.question_id}}_check" value="{{answer.pk}}" onclick="checkOnlyOne(this)">&nbsp;&nbsp;{{answer}}<br>
     {% endfor %}
   </div>
 </div>
@@ -123,7 +123,7 @@
     </div>
     <div class="col-md-auto checkbox-with-img">
       {% for answer in qs_3.answer_set.all %}
-        <input type="checkbox" name="question-{{qs_3.question_id}}" value="{{answer.pk}}" onclick="checkOnlyOne(this)">&nbsp;&nbsp;{{answer}}<br>
+        <input type="checkbox" name="qna{{qs_3.question_id}}_check" value="{{answer.pk}}" onclick="checkOnlyOne(this)">&nbsp;&nbsp;{{answer}}<br>
       {% endfor %}
     </div>
   </div>
@@ -143,7 +143,7 @@
     </div>
     <div class="col-md-auto checkbox-with-img">
       {% for answer in qs_4.answer_set.all %}
-        <input type="checkbox" name="question-{{qs_4.question_id}}" value="{{answer.pk}}" onclick="checkOnlyOne(this)">&nbsp;&nbsp;{{answer}}<br>
+        <input type="checkbox" name="qna{{qs_4.question_id}}_check" value="{{answer.pk}}" onclick="checkOnlyOne(this)">&nbsp;&nbsp;{{answer}}<br>
       {% endfor %}
     </div>
   </div>
