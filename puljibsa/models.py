@@ -20,6 +20,7 @@ class Answer(models.Model):
         return self.answer_text
 
 
+# 농사로
 class Plant(models.Model):
     plt_cd = models.CharField(unique=True, max_length=10)
     plt_nm = models.CharField(max_length=100)
