@@ -153,19 +153,19 @@ var arTest = [];
 
 function total() {
 
-    $("input[name=state]:checked").each(function () {
+    $("input[name=qna1_check]:checked").each(function () {
         arTest.push($(this).val());
     });
 
-    $("input[name=addition_qna]:checked").each(function () {
+    $("input[name=qna2_check]:checked").each(function () {
         arTest.push($(this).val());
     });
 
-    $("input[name=addition_qna2]:checked").each(function () {
+    $("input[name=qna3_check]:checked").each(function () {
         arTest.push($(this).val());
     });
 
-    $("input[name=addition_qna3]:checked").each(function () {
+    $("input[name=qna4_check]:checked").each(function () {
         arTest.push($(this).val());
     });
     console.log("체크된 값 total : " + arTest);
