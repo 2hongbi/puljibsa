@@ -82,9 +82,17 @@
     ✔ 흔들리지 않게 촬영해주세요.
   </div>
 </div>
-<div id="addIMG">
-  <img src="{% static 'img/addIMG.png' %}" alt="exampleImg" class="img-fluid">
+
+<div class="mb-3 mt-5">
+  <form name="plant_picture" id="plant_picture" action="" method="post" enctype="multipart/form-data">
+    <input class="form-control" type="file">
+    <button type="button" onclick="uploadFile()">제출</button>
+  </form>
 </div>
+
+{#<div id="addIMG">#}
+{#  <img src="{% static 'img/addIMG.png' %}" alt="exampleImg" class="img-fluid">#}
+{#</div>#}
 
 <button type="button" class="prev-btn btn btn-light mt-5" onclick="insertQna2_pre();">이전</button>
 <button type="button" class="next-btn btn btn-light mt-5" onclick="insertAddqna1_next();">다음</button>

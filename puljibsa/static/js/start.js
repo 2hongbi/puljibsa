@@ -229,3 +229,16 @@ function resultIntro_next() {
 function resultIntro_Page() {
   window.location.href = 'introduction/'
 }
+
+function uploadFile(){
+    var form = $('#plant_picture')[0];
+    var formData = new FormData(form);
+    $.ajax({
+        type : 'POST',  //전송 방식
+        url : '',
+        enctype: 'multipart/form-data', //파일 전송
+        data : formData,//전송 파라미터
+        contentType : false,
+        processData : false
+    });
+}
