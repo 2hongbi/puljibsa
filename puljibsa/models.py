@@ -1,6 +1,15 @@
 import datetime
 from django.db import models
-from django.utils import timezone
+
+
+class PJSUser(models.Model):
+    # user_id  = auto_increment
+    # user_plants_code
+    answer_1 = models.IntegerField()
+    answer_2 = models.IntegerField()
+    answer_3 = models.IntegerField()
+    answer_4 = models.IntegerField()
+    user_pic = models.ImageField(upload_to='puljibsa', null=True)
 
 
 class Question(models.Model):
