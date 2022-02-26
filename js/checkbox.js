@@ -181,4 +181,8 @@ function total() {
     console.log("체크된 값 total : " + arTest);
 }
 
+function removeElement() {
+    arTest.pop();
+    console.log("이전 값 total : " + arTest);
+}
 
