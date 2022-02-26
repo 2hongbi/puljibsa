@@ -172,3 +172,7 @@ function total() {
 }
 
 
+function removeElement() {
+    arTest.pop();
+    console.log("이전 값 total : " + arTest);
+}
