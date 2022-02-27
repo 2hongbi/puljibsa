@@ -171,8 +171,17 @@ function total() {
     console.log("체크된 값 total : " + arTest);
 }
 
-
 function removeElement() {
     arTest.pop();
     console.log("이전 값 total : " + arTest);
+}
+
+function uploadTextData(){
+    $.ajax({
+        type : 'POST',  //전송 방식
+        url : '',
+        data : {
+            textData: arTest
+        }
+    });
 }

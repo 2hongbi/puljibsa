@@ -239,6 +239,11 @@ function uploadFile(){
         enctype: 'multipart/form-data', //파일 전송
         data : formData,//전송 파라미터
         contentType : false,
-        processData : false
+        processData : false,
+        success : function(){
+          alert('제출 완료');
+        }
     });
 }
+
+
