@@ -85,7 +85,8 @@
 
 <div class="mb-3 mt-5">
   <form name="plant_picture" id="plant_picture" action="" method="post" enctype="multipart/form-data">
-    <input class="form-control" type="file">
+    {% csrf_token %}
+    <input class="form-control" type="file" name="imgs" multiple>
     <button type="button" onclick="uploadFile()">제출</button>
   </form>
 </div>

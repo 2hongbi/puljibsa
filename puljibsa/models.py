@@ -9,7 +9,10 @@ class PJSUser(models.Model):
     answer_2 = models.IntegerField()
     answer_3 = models.IntegerField()
     answer_4 = models.IntegerField()
-    user_pic = models.ImageField(upload_to='puljibsa', null=True)
+    user_pic = models.ImageField(upload_to='puljibsa', blank=True, null=True)
+
+    def __str__(self):
+        return self.answer_1 + '/' + self.answer_2 + '/' + self.answer_3 + '/' + self.answer_4
 
 
 class Question(models.Model):
