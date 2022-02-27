@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from .models import Question, Answer
+from .models import Question, PJSUser
 
 
 def index(request):
@@ -20,6 +20,14 @@ def index(request):
 
 def intro(request):
     return render(request, 'puljibsa/introduction.html')
+
+
+def upload(request):
+    if request.method == 'POST':
+        for img in request.FILES.getlist('imgs'):
+            photo = PJSUser()
+            photo.image = img
+            photo.save()
 
 
 def result(request):

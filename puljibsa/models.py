@@ -1,6 +1,22 @@
 import datetime
 from django.db import models
-from django.utils import timezone
+
+
+class PJSUser(models.Model):
+    # user_id  = auto_increment
+    # user_plants_code
+    answer_1 = models.IntegerField()
+    answer_2 = models.IntegerField()
+    answer_3 = models.IntegerField()
+    answer_4 = models.IntegerField()
+# <<<<<<< HEAD
+    user_pic = models.ImageField(upload_to='puljibsa', null=True)
+# =======
+    user_pic = models.ImageField(upload_to='puljibsa', blank=True, null=True)
+
+    def __str__(self):
+        return self.answer_1 + '/' + self.answer_2 + '/' + self.answer_3 + '/' + self.answer_4
+# >>>>>>> 68436845883e30578d5ff7b5e5368439894f3969
 
 
 class Question(models.Model):
@@ -20,6 +36,7 @@ class Answer(models.Model):
         return self.answer_text
 
 
+# 농사로
 class Plant(models.Model):
     plt_cd = models.CharField(unique=True, max_length=10)
     plt_nm = models.CharField(max_length=100)
