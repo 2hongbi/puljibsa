@@ -235,7 +235,7 @@ function uploadFile(){
     var formData = new FormData(form);
     $.ajax({
         type : 'POST',  //전송 방식
-        url : '',
+        url : 'upload/',
         enctype: 'multipart/form-data', //파일 전송
         data : formData,//전송 파라미터
         contentType : false,
