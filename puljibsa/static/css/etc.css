@@ -64,31 +64,10 @@ th, td {
   margin: 10px;
 }
 
-/*
-#plantResult {
-  margin: 25px;
-  width: 100%;
-  max-width: 500px;
-}
-
-<<<<<<< HEAD
-.result {
-  color: #000000;
-  font-weight: bold;
-  font-size: 17px;
-} */
-
 .resultTitle {
   color: #000000;
   font-weight: bold;
   font-size: 17px;
-=======
-
-.resultTitle {
-  color: #000000;
-  font-weight: bold;
-  font-size: 17px;
->>>>>>> 517ff4ce457d5afaa6117e9f4ad84f24c9b708ba
 }
 
 .resultCheck {
