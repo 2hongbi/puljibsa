@@ -180,4 +180,26 @@
   .next-btn {
     position: absolute;
   }
+
+  .mb-5{
+    font-size:12px;
+    text-align: center;
+  }
+
+  .example-guide{
+    font-size:10px;
+    text-align: left;
+    float: right;
+  }
+
+  .img-fluid{
+    max-width:80%;
+    height:auto;
+  }
+  
+  #exampleIMG{
+    margin-left: 15px;
+    margin-right:5px;
+    float: left;
+  }
 }

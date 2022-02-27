@@ -198,11 +198,11 @@ function addqna3Result_next() {
   addition_qna3.style.WebkitAnimation = "fadeOut 1s";
   addition_qna3.style.animation = "fadeOut 1s";
   setTimeout(() => {
-    result.style.WebkitAnimation = "fadeIn 1s";
-    result.style.animation = "fadeIn 1s";
+    plantResult.style.WebkitAnimation = "fadeIn 1s";
+    plantResult.style.animation = "fadeIn 1s";
     setTimeout(() => {
       addition_qna3.style.display = "none";
-      result.style.display = "block";
+      plantResult.style.display = "block";
     }, 450)
   }, 450);
 }
