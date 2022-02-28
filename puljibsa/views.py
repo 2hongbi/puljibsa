@@ -33,4 +33,5 @@ def upload(request):
 
 @csrf_exempt
 def result(request):
+
     return render(request, 'puljibsa/result.html')

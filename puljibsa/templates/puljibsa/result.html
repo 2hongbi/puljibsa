@@ -5,7 +5,7 @@
 <section class="mx-auto mt-5 py-5 px-3">
     <div>
         <h6 id="hashtags">#식물종류  #증상이름</h6>
-        <img id="plantImg" src="{% static 'img/plant.jpg' %}" width="400" height="400" alt="이용자가 촬영한 식물사진">
+        <img id="plantImg" src="{% static 'img/mon.jpeg' %}" width="400" height="400" alt="이용자가 촬영한 식물사진">
     </div>
 
     <div id="downShare">
@@ -50,8 +50,8 @@
         </div>
         <br>
         <div class="text-center">
-            <button type="button" class="pageBtn" onclick="MainPage_return()">처음으로</button>
-            <button type="button" class="pageBtn" onclick="resultIntro_Page();">다음</button>
+            <button type="button" class="prev-btn btn btn-light mt-5" onclick="MainPage_return()">처음으로</button>
+            <button type="button" class="next-btn btn btn-light mt-5" onclick="resultIntro_Page();">다음</button>
         </div>
 </section>
 {% endblock %}
