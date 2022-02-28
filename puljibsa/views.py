@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from .models import Question, PJSUser
+from django.views.decorators.csrf import csrf_exempt
 
 
 def index(request):
@@ -30,5 +31,6 @@ def upload(request):
             photo.save()
 
 
+@csrf_exempt
 def result(request):
     return render(request, 'puljibsa/result.html')

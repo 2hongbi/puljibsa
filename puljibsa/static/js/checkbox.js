@@ -2,6 +2,10 @@ function qna1_get_checked() {
     var found = null;
     var check_qna1 = document.getElementsByName("qna0_check");
 
+    if (check_qna1[1].checked) {
+        return resultIntro_Page();
+    }
+
     for (var i = 0; i < check_qna1.length; i++) {
         if (check_qna1[i].checked) {
             found = check_qna1[i];
@@ -73,7 +77,7 @@ function addition_qna3_get_checked() {
         }
     }
     if (found != null) {
-        return addqna3Loading_next();
+        return [addqna3Result_next(), addqna3Result_Page()];
     } else {
         alert("답변을 선택해주세요.");
         return false;
@@ -179,9 +183,15 @@ function removeElement() {
 function uploadTextData(){
     $.ajax({
         type : 'POST',  //전송 방식
-        url : 'result/',
+        url : '{% url "result" %}',
         data : {
             textData: arTest
+        },
+        success: function(data) {
+            console.log('데이터전송 성공!', data);
+        },
+        error: function(error) {
+            console.log('에러', error);
         }
     });
 }
