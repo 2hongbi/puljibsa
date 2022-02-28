@@ -227,7 +227,7 @@ function resultIntro_next() {
 }
 
 function resultIntro_Page() {
-  window.location.href = 'introduction/'
+  window.location.href = '../introduction/';
 }
 
 function uploadFile(){

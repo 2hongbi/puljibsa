@@ -183,7 +183,7 @@ function removeElement() {
 function uploadTextData(){
     $.ajax({
         type : 'POST',  //전송 방식
-        url : '{% url "result" %}',
+        url : '{% url "result" %}', // result/
         data : {
             textData: arTest
         },
