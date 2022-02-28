@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from .models import Question, PJSUser
+from .models import Question, Plant, PlantStatus, PJSUser
 from django.views.decorators.csrf import csrf_exempt
 
 
@@ -33,5 +33,13 @@ def upload(request):
 
 @csrf_exempt
 def result(request):
-
     return render(request, 'puljibsa/result.html')
+
+
+"""
+@csrf_exempt
+def result_page(request):
+    plt_kind = predict_species('./10plants_model_a87.h5', '')
+    plt_info = PlantStatus.objects.filter(plants=plt_kind)
+    return render(request, 'puljibsa/result.html')
+"""
