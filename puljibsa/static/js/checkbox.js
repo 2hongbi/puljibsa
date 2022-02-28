@@ -73,7 +73,7 @@ function addition_qna3_get_checked() {
         }
     }
     if (found != null) {
-        return [addqna3Result_next(), addqna3Result_Page()];
+        return addqna3Loading_next();
     } else {
         alert("답변을 선택해주세요.");
         return false;
