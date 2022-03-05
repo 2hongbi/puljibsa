@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Title</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+          integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+          integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+  <!-- Bootstrap -->
+
+  <link href="./../css/common.css" rel="stylesheet">
+  <link href="./../css/qna.css" rel="stylesheet">
+  <link href="./../css/animation.css" rel="stylesheet">
+</head>
+
+<body>
+<p class="fixTextTop" class="mt-3 fixed-top mx-auto header fw-light">풀집사 beta 서비스</p>
+
+<div class="text-center cover-container d-flex h-100 p-3 mx-auto flex-column">
+  <!-- ******main****** -->
+  <div id='main' class="mx-auto mt-10 py-5 px-3">
+    <div id="title" class="mx-auto">
+      <img src="./../img/title.png" alt="titleImg" class="img-fluid"><br>
+      <img src="./../img/character.png" alt="chaImg" class="img-fluid"><br>
+    </div>
+
+    <button type="button" class="btn btn-light mt-5" onclick="begin();">시작하기</button>
+
+    <div id="sns">
+      <img id="facebook" src="./../img/SNS/facebook.png" alt="titleImg" class="img-fluid">
+      <img id="kakaotalk" src="./../img/SNS/kakaotalk.png" alt="titleImg" class="img-fluid">
+      <img id="instagram" src="./../img/SNS/Instagram.png" alt="titleImg" class="img-fluid">
+      <img id="link" src="./../img/SNS/link.png" alt="titleImg" class="img-fluid">
+    </div>
+
+  </div>
+
+  <!-- ******qna1****** -->
+  <div id='qna1' class="qna mx-auto">
+    <div class="expert mt-10 mx-auto mb-5">
+      <img src="./../img/expert.png" alt="expertImg" class="img-fluid">
+
+      <p class="mb-5">
+        풀집사님 반가워요!<br>
+        저는 풀님의 진료를 볼 풀 전문가 입니다.<br>
+        원하는 답변을 선택해주세요.
+      </p>
+    </div>
+
+    <div class="content">
+      <div class="col-md-auto character-img">
+        <img src="./../img/character.png" alt="풀집사캐릭터" class="img-fluid img-small">
+      </div>
+      <div class="col-md-auto checkbox-with-img">
+        <input type="checkbox" name="qna1_check" value="a" onclick="checkOnlyOne(this);"> 상태진단 해주세요. <br>
+        <input type="checkbox" name="qna1_check" value="b" onclick="checkOnlyOne(this);"> 풀집사 서비스가 궁금해요.
+      </div>
+    </div>
+    <button type="button" class="prev-btn btn btn-light mt-5" onclick="qna1Main_pre();">이전</button>
+    <button type="button" class="next-btn btn btn-light mt-5" onclick="qna1_get_checked();/*qna1Qna2_next();*/">다음</button>
+  </div>
+
+  <!-- ******qna2****** -->
+  <div id='qna2' class="qna mx-auto">
+    <div class="expert mt-10 mx-auto mb-5">
+      <img src="./../img/expert.png" alt="expertImg" class="img-fluid">
+      <p class="mb-5s">
+        풀님에게 해당되는 증상에<br>
+        <b>모두</b> 체크해주세요.
+      </p>
+    </div>
+
+    <div class="only-checkbox">
+      <input type="checkbox" name="state" value="잎이 노랗게 변했어요" onclick="checkOnlyOne(this)"> 잎이 노랗게 변했어요. <br>
+      <input type="checkbox" name="state" value="잎이 힘없이 축 늘어졌어요." onclick="checkOnlyOne(this)"> 잎이 힘없이 축 늘어졌어요. <br>
+      <input type="checkbox" name="state" value="줄기에 하얀 벌레가 생겼어요." onclick="checkOnlyOne(this)"> 줄기에 하얀 벌레가 생겼어요. <br>
+      <input type="checkbox" name="state" value="화분 속 흙이 하얗게 변했어요." onclick="checkOnlyOne(this)"> 화분 속 흙이 하얗게 변했어요. <br>
+      <input type="checkbox" name="state" value="증상이 없어요." onclick="checkOnlyOne(this)"> 증상이 없어요.
+    </div>
+
+    <button type="button" class="prev-btn btn btn-light mt-5" onclick="qna2Qna1_pre();">이전</button>
+    <button type="button" class="next-btn btn btn-light mt-5" onclick="total(); state_get_checked();/*qna2Insert_next();*/">다음</button>
+  </div>
+
+  <!-- ******insert-pic****** -->
+  <section id='insert-pic' class="mx-auto">
+    <p class="mb-5">
+      보다 정확한 진단을 위해<br>
+      <b>아래의 사진과 요구 사항</b>을 참고해주세요.
+    </p>
+    <div id="example">
+      <div id="exampleIMG">
+        <img src="./../img/example.png" alt="exampleImg" class="img-fluid">
+      </div>
+      <div id="example-guide">
+        ✔ 풀님의 단독 사진을 올려주세요.<br>
+        ✔ 풀님의 잎사귀와 줄기 전체가<br>
+        &emsp;&nbsp;나오게 올려주세요.<br>
+        ✔ 흔들리지 않게 촬영해주세요.
+      </div>
+    </div>
+    <div id="addIMG">
+      <img src="./../img/addIMG.png" alt="exampleImg" class="img-fluid">
+    </div>
+
+    <button type="button" class="prev-btn btn btn-light mt-5" onclick="removeElement(); insertQna2_pre();">이전</button>
+    <button type="button" class="next-btn btn btn-light mt-5" onclick="insertAddqna1_next();">다음</button>
+
+  </section>
+
+  <!-- ******addition-qna****** -->
+  <section id='addition-qna' class="mx-auto">
+    <div id="addition">
+      <p>첫번째 <b>추가 질문</b> 입니다.</p>
+      <p>풀님에게 어느 정도의 주기로 물을 주나요?</p>
+    </div>
+    <div class="content">
+      <div class="col-md-auto character-img">
+        <img src="./../img/character.png" alt="풀집사캐릭터" class="img-fluid img-small">
+      </div>
+      <div class="col-md-auto checkbox-with-img">
+        <input type="checkbox" name="addition_qna" value="a" onclick="checkOnlyOne(this)"> 흙 상태를 보고 매번 달라요.<br>
+        <input type="checkbox" name="addition_qna" value="b" onclick="checkOnlyOne(this)"> 일주일에 한 번이요.<br>
+        <input type="checkbox" name="addition_qna" value="c" onclick="checkOnlyOne(this)"> 두 주에 한 번이요.<br>
+        <input type="checkbox" name="addition_qna" value="d" onclick="checkOnlyOne(this)"> 한달에 한 번이요.
+      </div>
+    </div>
+    <button type="button" class="prev-btn btn btn-light mt-5" onclick="addqna1Insert_pre();">이전</button>
+    <button type="button" class="next-btn btn btn-light mt-5" onclick="total(); addition_qna_get_checked();/*addqna12_next();*/">다음</button>
+  </section>
+
+    <!-- ******addition-qna2****** -->
+  <section id='addition-qna2' class="mx-auto">
+    <div id="addition2">
+      <p>두번째 <b>추가 질문</b> 입니다.</p>
+      <p>풀님에게 한번에 얼마만큼의 물을 주나요?</p>
+    </div>
+    <div class="content">
+      <div class="col-md-auto character-img">
+        <img src="./../img/character.png" alt="풀집사캐릭터" class="img-fluid img-small">
+      </div>
+      <div class="col-md-auto checkbox-with-img">
+        <input type="checkbox" name="addition_qna2" value="a" onclick="checkOnlyOne(this)"> 화분 안의 흙이 다 젖을 정도로 줘요.<br>
+        <input type="checkbox" name="addition_qna2" value="b" onclick="checkOnlyOne(this)"> 겉 흙만 젖을 정도로 줘요.<br>
+        <input type="checkbox" name="addition_qna2" value="c" onclick="checkOnlyOne(this)"> 잘 모르겠어요.
+      </div>
+    </div>
+    <button type="button" class="prev-btn btn btn-light mt-5" onclick="removeElement(); addqna21_pre();">이전</button>
+    <button type="button" class="next-btn btn btn-light mt-5" onclick="total(); addition_qna2_get_checked();/*addqna23_next();*/">다음</button>
+  </section>
+
+    <!-- ******addition-qna3****** -->
+  <section id='addition-qna3' class="mx-auto">
+    <div id="addition3">
+      <p>마지막 <b>추가 질문</b> 입니다.</p>
+      <p>풀님은 어떤 환경에서 자라고 있나요?</p>
+    </div>
+    <div class="content">
+      <div class="col-md-auto character-img">
+        <img src="./../img/character.png" alt="풀집사캐릭터" class="img-fluid img-small">
+      </div>
+      <div class="col-md-auto checkbox-with-img">
+        <input type="checkbox" name="addition_qna3" value="a" onclick="checkOnlyOne(this)"> 햇빛을 직접적으로 받는 곳이요.<br>
+        <input type="checkbox" name="addition_qna3" value="b" onclick="checkOnlyOne(this)"> 유리창, 얇은 커튼 등을 통해 햇빛을 간접적으로 받는 곳이요.<br>
+        <input type="checkbox" name="addition_qna3" value="c" onclick="checkOnlyOne(this)"> 그늘진 곳이요.
+      </div>
+    </div>
+    <button type="button" class="prev-btn btn btn-light mt-5" onclick="removeElement(); addqna32_pre();">이전</button>
+    <button type="button" class="next-btn btn btn-light mt-5" onclick="total(); addition_qna3_get_checked(); /*addqna3Result_next(); addqna3Result_Page();*/">다음</button>
+  </section>
+
+  <!-- ******loading****** -->
+  <section id='loading'>
+    <div style="display: grid; place-items: center; min-height: 100vh;">
+      <p>상태진단중...</p>
+    </div>
+  </section>
+
+
+  <!-- Footer -->
+  <p class="fixTextBottom" class="fixed-bottom mx-auto footer fw-light">Copyrightⓒ플즈</p>
+  <!-- Footer -->
+</div>
+<!-- <script src="//code.jquery.com/jquery-1.11.0.min.js"></script> -->
+<script src="./../js/start.js" charset="utf-8"></script>
+<script src="./../js/checkbox.js " charset="utf-8"></script>
+</body>
+
+</html>

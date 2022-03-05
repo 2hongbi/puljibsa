@@ -1,0 +1,183 @@
+/* main */
+.img-small {
+  width: 150px;
+}
+
+.btn {
+  width: 129px;
+  height: 48px;
+  left: 123px;
+  top: 531px;
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+}
+
+#sns{
+  margin: 50px;
+}
+
+#facebook{
+  margin-right: 20px;
+}
+#kakaotalk{
+  margin-right: 20px;
+}
+#instagram{
+  margin-right: 20px;
+}
+
+/* qna section */
+.qna{
+  margin-top: 50px;
+}
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.content > div {
+  flex-shrink: 0;
+  max-width: 100%;
+}
+
+#title{
+  margin-top: 80px;
+}
+
+#qna1 { display: none; }
+#qna2 { display: none; }
+
+.expert {
+  text-align: center;
+}
+
+.checkbox-with-img {
+  margin: auto;
+  text-align: left;
+}
+
+.only-checkbox {
+  text-align: left;
+}
+
+.checkbox-with-img input,.only-checkbox input{
+  margin-bottom: 15px;
+}
+
+/* insert-pic section */
+#insert-pic{
+  display: none;
+  margin-top: 150px;
+}
+
+#exampleIMG{
+  margin-left: 20px;
+  float:left;
+  margin-right: 30px;
+}
+
+#example-guide{
+  float:left;
+  text-align: left;
+}
+
+#addIMG{
+  margin-top: 200px;
+  text-align: center;
+}
+
+/* addition-qna section */
+#addition-qna{
+  display: none;
+}
+
+#addition {
+  font-size: 17px;
+  margin-top: 100px;
+  text-align: center;
+}
+
+/* addition-qna2 section */
+#addition-qna2{
+  display: none;
+}
+
+#addition2 {
+  font-size: 17px;
+  margin-top: 100px;
+  text-align: center;
+}
+
+/* addition-qna3 section */
+#addition-qna3{
+  display: none;
+}
+
+#addition3 {
+  font-size: 17px;
+  margin-top: 100px;
+  text-align: center;
+}
+
+/* loading section */
+#loading {
+  display: none;
+}
+
+/* common */
+.prev-btn{
+  width: 86px;
+  height: 37px;
+  left: 28px;
+  top: 651px;
+
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  border-radius: 15px;
+}
+
+.next-btn{
+  width: 86px;
+  height: 37px;
+  left: 260px;
+  top: 651px;
+
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  border-radius: 15px;
+}
+
+
+/* mobile (max-width: 450px) */
+@media screen and (max-width:450px) {
+  .character-img {
+    position: absolute;
+    width: 124px;
+    height: 145px;
+    left: 20px;
+    top: 406px;
+  }
+
+  .checkbox-with-img {
+    position: absolute;
+    width: auto;
+    height: 76px;
+    left: 137px;
+    top: 440px;
+  }
+
+  .prev-btn {
+    position: absolute;
+    left: 40px;
+  }
+
+  .next-btn {
+    position: absolute;
+  }
+}
