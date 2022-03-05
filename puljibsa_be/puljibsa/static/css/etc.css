@@ -1,0 +1,153 @@
+h5 {
+  margin-top: 0;
+}
+
+img {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+ul {
+  margin-top: 100px;
+  width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+p {
+  line-height: 140%;
+  font-size: 15px;
+}
+
+
+/* introduction.html */
+#title {
+  margin-top: 5%;
+  text-align: center;
+}
+
+#service {
+  margin-top: 5%;
+  width: 600px;
+  text-align: center;
+  font-size: 12px;
+
+  margin-left: 3%;
+  margin-right: 3%;
+}
+
+table {
+  margin-top: 5%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+th, td {
+  padding: 5px;
+  color: #000000;
+  list-style: none;
+
+  line-height: 160%;
+  font-size: 16px;
+}
+
+/* result.html */
+#hashtags {
+  font-weight: bold;
+  text-align: center;
+}
+
+#downShare {
+  align-items: center;
+  text-align: center;
+  margin: 10px;
+}
+
+.resultTitle {
+  color: #000000;
+  font-weight: bold;
+  font-size: 17px;
+}
+
+.resultCheck {
+  margin-top: 15px;
+  color: chocolate;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.explanation {
+  margin-bottom: 40px;
+  font-size: 15px;
+}
+
+/* mobile (max-width: 400px) */
+@media screen and (max-width:450px) {
+
+  #hashtags {
+    font-size: 14px;
+  }
+
+  #plantImg {
+    width: 350px;
+    height: 350px;
+  }
+
+  #download, #share {
+    width: 15px;
+    height: 15px;
+  }
+
+  #plantResult {
+    width: 100%;
+    margin: 5px;
+  }
+
+  #plantResult .result {
+    font-size: 14px;
+    font-weight: bold;
+    text-align: left;
+  }
+
+  #plantResult .explanation {
+    font-size: 14px;
+    text-align: left;
+  }
+
+  .pageBtn {
+    margin: 10px;
+    font-size:13px;
+    padding:10px 18px;
+  }
+
+  .pageBtn:hover {
+    background-color:transparent;
+  }
+
+  .pageBtn:active {
+    position:relative;
+    top:1px;
+  }
+
+  .fixTextBottom {
+    position: fixed;
+    top: 95%;
+    width: 100%;
+    height: 14px;
+    margin-top: 5%;
+    margin-bottom: 3%;
+    margin-left: auto;
+    margin-right: auto;
+
+    font-family: 'NanumGothic', serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 13px;
+    line-height: 13px;
+    /* identical to box height */
+    text-align: center;
+    letter-spacing: 0.05em;
+    color: #979696;
+  } 
+}

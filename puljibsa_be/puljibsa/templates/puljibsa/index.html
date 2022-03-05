@@ -1,0 +1,169 @@
+{% extends 'base.html' %}
+{% load static %}
+
+<!-- {% block title %}풀집사🌱{% endblock %} -->
+
+{% block content %}
+<!-- Main -->
+<div id='main' class="mx-auto mt-10 py-5 px-3">
+  <div id="title" class="mx-auto">
+    <img src="{% static 'img/title.png' %}" alt="titleImg" class="img-fluid"><br>
+    <img src="{% static 'img/character.png' %}" alt="chaImg" class="img-fluid"><br>
+  </div>
+
+  <button type="button" class="btn btn-light mt-5" onclick="begin();">시작하기</button>
+
+  <div id="sns">
+    <img id="facebook" src="{% static '/img/SNS/facebook.png' %}" alt="titleImg" class="img-fluid">
+    <img id="kakaotalk" src="{% static '/img/SNS/kakaotalk.png' %}" alt="titleImg" class="img-fluid">
+    <img id="instagram" src="{% static '/img/SNS/Instagram.png' %}" alt="titleImg" class="img-fluid">
+    <img id="link" src="{% static '/img/SNS/link.png' %}" alt="titleImg" class="img-fluid">
+  </div>
+</div>
+
+<!-- QnA 1 -->
+<div id='qna1' class="qna mx-auto">
+<div class="expert mt-10 mx-auto mb-5">
+  <img src="{% static 'img/expert.png' %}" alt="expertImg" class="img-fluid">
+
+  <p class="mb-5">
+    풀집사님 반가워요!<br>
+    저는 풀님의 진료를 볼 풀 전문가 입니다.<br>
+    원하는 답변을 선택해주세요.
+  </p>
+</div>
+
+<div class="content">
+  <div class="col-md-auto character-img">
+    <img src="{% static 'img/character.png' %}" alt="풀집사캐릭터" class="img-fluid img-small">
+  </div>
+  <div class="col-md-auto checkbox-with-img">
+    <input type="checkbox" name="qna0_check" value="a" onclick="checkOnlyOne(this);"> 상태진단 해주세요. <br>
+    <input type="checkbox" name="qna0_check" value="b" onclick="checkOnlyOne(this);"> 풀집사 서비스가 궁금해요.
+  </div>
+</div>
+<button type="button" class="prev-btn btn btn-light mt-5" onclick="qna1Main_pre();">이전</button>
+<button type="button" class="next-btn btn btn-light mt-5" onclick="qna1_get_checked();/*qna1Qna2_next();*/">다음</button>
+</div>
+
+<!-- QnA 2 -->
+<div id='qna2' class="qna mx-auto">
+<div class="expert mt-10 mx-auto mb-5">
+  <img src="{% static 'img/expert.png' %}" alt="expertImg" class="img-fluid">
+  <p class="mb-5s">
+    {{qs_1}}
+  </p>
+</div>
+
+<div class="only-checkbox">
+  {% for answer in qs_1.answer_set.all %}
+    <input type="checkbox" name="qna{{qs_1.question_id}}_check" value="{{answer.pk}}" onclick="checkOnlyOne(this)">&nbsp;&nbsp;{{answer}}<br>
+  {% endfor %}
+</div>
+
+<button type="button" class="prev-btn btn btn-light mt-5" onclick="qna2Qna1_pre();">이전</button>
+<button type="button" class="next-btn btn btn-light mt-5" onclick="total(); state_get_checked();/*qna2Insert_next();*/">다음</button>
+</div>
+
+<!-- Insert Picture -->
+<section id='insert-pic' class="mx-auto">
+<p class="mb-5">
+  보다 정확한 진단을 위해<br>
+  <b>아래의 사진과 요구 사항</b>을 참고해주세요.
+</p>
+<div id="example">
+  <div id="exampleIMG">
+    <img src="{% static 'img/example.png' %}" alt="exampleImg" class="img-fluid">
+  </div>
+  <div id="example-guide">
+    ✔ 풀님의 단독 사진을 올려주세요.<br>
+    ✔ 풀님의 잎사귀와 줄기 전체가<br>
+    &emsp;&nbsp;나오게 올려주세요.<br>
+    ✔ 흔들리지 않게 촬영해주세요.
+  </div>
+</div>
+
+<div class="mb-3 mt-5">
+  <form name="plant_picture" id="plant_picture" action="" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <input class="form-control" type="file" name="imgs" multiple>
+    <button type="button" onclick="uploadFile()">제출</button>
+  </form>
+</div>
+
+{#<div id="addIMG">#}
+{#  <img src="{% static 'img/addIMG.png' %}" alt="exampleImg" class="img-fluid">#}
+{#</div>#}
+
+<button type="button" class="prev-btn btn btn-light mt-5" onclick="removeElement(); insertQna2_pre();">이전</button>
+<button type="button" class="next-btn btn btn-light mt-5" onclick="insertAddqna1_next();">다음</button>
+
+</section>
+
+<!-- Additional question -->
+<section id='addition-qna' class="mx-auto">
+<div id="addition">
+  <p>첫번째 <b>추가 질문</b> 입니다.</p>
+  <p>{{qs_2}}</p>
+</div>
+<div class="content">
+  <div class="col-md-auto character-img">
+    <img src="{% static 'img/character.png' %}" alt="풀집사캐릭터" class="img-fluid img-small">
+  </div>
+  <div class="col-md-auto checkbox-with-img">
+    {% for answer in qs_2.answer_set.all %}
+      <input type="checkbox" name="qna{{qs_2.question_id}}_check" value="{{answer.pk}}" onclick="checkOnlyOne(this)">&nbsp;&nbsp;{{answer}}<br>
+    {% endfor %}
+  </div>
+</div>
+<button type="button" class="prev-btn btn btn-light mt-5" onclick="addqna1Insert_pre();">이전</button>
+<button type="button" class="next-btn btn btn-light mt-5" onclick="total(); addition_qna_get_checked();/*addqna12_next();*/">다음</button>
+</section>
+
+<!-- Additional question 2 -->
+<section id='addition-qna2' class="mx-auto">
+  <div id="addition2">
+    <p>두번째 <b>추가 질문</b> 입니다.</p>
+    <p>{{qs_3}}</p>
+  </div>
+  <div class="content">
+    <div class="col-md-auto character-img">
+      <img src="{% static '/img/character.png' %}" alt="풀집사캐릭터" class="img-fluid img-small">
+    </div>
+    <div class="col-md-auto checkbox-with-img">
+      {% for answer in qs_3.answer_set.all %}
+        <input type="checkbox" name="qna{{qs_3.question_id}}_check" value="{{answer.pk}}" onclick="checkOnlyOne(this)">&nbsp;&nbsp;{{answer}}<br>
+      {% endfor %}
+    </div>
+  </div>
+  <button type="button" class="prev-btn btn btn-light mt-5" onclick="removeElement(); addqna21_pre();">이전</button>
+  <button type="button" class="next-btn btn btn-light mt-5" onclick="total(); addition_qna2_get_checked();/*addqna23_next();*/">다음</button>
+</section>
+
+<!-- Additional question 3 -->
+<section id='addition-qna3' class="mx-auto">
+  <div id="addition3">
+    <p>마지막 <b>추가 질문</b> 입니다.</p>
+    <p>{{qs_4}}</p>
+  </div>
+  <div class="content">
+    <div class="col-md-auto character-img">
+      <img src="{% static '/img/character.png' %}" alt="풀집사캐릭터" class="img-fluid img-small">
+    </div>
+    <div class="col-md-auto checkbox-with-img">
+      {% for answer in qs_4.answer_set.all %}
+        <input type="checkbox" name="qna{{qs_4.question_id}}_check" value="{{answer.pk}}" onclick="checkOnlyOne(this)">&nbsp;&nbsp;{{answer}}<br>
+      {% endfor %}
+    </div>
+  </div>
+  <button type="button" class="prev-btn btn btn-light mt-5" onclick="removeElement(); addqna32_pre();">이전</button>
+  <button type="button" class="next-btn btn btn-light mt-5" onclick="total(); addition_qna3_get_checked(); uploadTextData(); /*addqna3Result_next(); addqna3Result_Page();*/">다음</button>
+</section>
+
+<!-- Loading page -->
+<section id='loading'>
+<div style="display: grid; place-items: center; min-height: 100vh;">
+  <p>상태진단중...</p>
+</div>
+</section>
+{% endblock %}

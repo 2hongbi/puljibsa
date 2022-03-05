@@ -1,0 +1,53 @@
+{% extends 'etc.html' %}
+{% load static %}
+
+{% block content %}
+<section id="main" class="mx-auto mt-5 py-5 px-3">
+    <div id="title">
+        <img src="{% static 'img/title.png' %}" width="100" height="100" alt="풀집사 이미지">
+        <h6>AI 식물 진단 서비스</h6>
+    </div>
+
+    <div id="service">
+        <p>
+            풀집사는 식물의 상태를 진단해주는 AI 식물 진단 서비스입니다. COVID-19, 1인 가구 증가, 미세먼지로 인한 공기정화의 필요성 등으로 식물을 취미 생활로 키우는 사람들이 증가하였고,
+            이로 인해 홈가드닝 시장은 지속적으로 성장하고 있습니다. 하지만 다른 취미 생활보다 접근성이 매우 낮아, 식물에 대한 이해와 정보 없이 키우는 사람들이 많았고,
+            결국 식물 키우기를 포기하고 실패하는 사람들이 늘어났습니다.
+        </p>
+        <p>
+            저희 풀집사는 앞서 언급된 키우는 식물의 정보, 식물을 키우는 올바른 방법 등을 제공하고, 사람이 아플 때 병원을 가듯이 식물이 상태가 좋지 않으면 풀집사 서비스를 통해 상태를 진단 받아
+            식물을 올바르고 건강하게 키울 수 있게 도와주기 위해 만들어졌습니다.
+        </p>
+        <p>
+            식물 키우는데 어려움을 느끼신다면, 풀집사와 함께 해주세요🙌
+        </p>
+    </div>
+
+    <table>
+        <tr>
+            <th class="name">✍ 기획</th>
+            <td>전혜린</td>
+        </tr>
+        <tr>
+            <th class="name">👀 프론트엔드</th>
+            <td>박주현</td>
+            <td>백혜수</td>
+            <td>이송희</td>
+        </tr>
+        <tr>
+            <th class="name">🧠 백엔드</th>
+            <td>이소연</td>
+        </tr>
+        <tr>
+            <th class="name">🦾 AI</th>
+            <td>이서연</td>
+            <td>홍서연</td>
+        </tr>
+        <tr>
+            <th class="name">🎨 디자인</th>
+            <td>이송희</td>
+        </tr>
+    </table>
+    <button type="button" class="prev-btn btn btn-light mt-5" onclick="MainPage_return();">처음으로</button>
+</section>
+{% endblock %}
